@@ -2,6 +2,17 @@
     import * as Card from '$lib/components/ui/card';
     import { Button } from '$lib/components/ui/button';
 	import { Separator } from '$lib/components/ui/separator';
+    import { guestDetailsStore } from '$lib/components/page/booking-page/guestdetailsstore.js';
+	import { onMount } from 'svelte';
+    
+    let guestDetail: any
+
+    onMount(() => {
+        return guestDetailsStore.subscribe(value => {
+            guestDetail = value
+        })
+    })
+    
 </script>
 
 <Card.Root>
@@ -11,7 +22,7 @@
     <Card.Content class="text-sm">
         <div class="grid gap-4">
             <div class="flex items-center">
-                <div>Subtotal</div>
+                <div>Price</div>
                 <div class="ml-auto">$169.00</div>
             </div>
             <div class="flex items-center">
@@ -26,8 +37,7 @@
         </div>
     </Card.Content>
     <Card.Footer class="flex items-center gap-2">
-        <Button size="sm">Collect payment</Button>
-        <Button size="sm" variant="outline">Send invoice</Button>
+        <Button size="sm" on:click={() => console.log(guestDetail)}>Book</Button>
     </Card.Footer>
 </Card.Root>
 
