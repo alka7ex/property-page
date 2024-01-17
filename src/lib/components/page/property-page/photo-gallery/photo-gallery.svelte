@@ -1,3 +1,8 @@
+<script>
+
+	import Modal from "../photo-gallery-modal/Modal.svelte";
+
+</script>
 <div class="mx-auto grid w-full max-w-6xl grid-cols-3 gap-4">
     <img
         alt="Primary"
@@ -21,6 +26,7 @@
             width="200"
             height="300"
         />
+        <Modal />
     </div>
 </div>
 
