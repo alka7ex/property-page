@@ -1,8 +1,8 @@
 <script lang="ts">
-
-	import PhotoGallery from '$lib/components/ui/photo-gallery/photo-gallery.svelte';
-	import PropertyDescriptions from '$lib/components/ui/property-descriptions/property-descriptions.svelte';
-	import PropertyRoomType from '$lib/components/ui/property-room-type/property-room-type.svelte';
+	import type { PageData } from './$types.js';
+	import PhotoGallery from '$lib/components/page/property-page/photo-gallery/photo-gallery.svelte';
+	import PropertyDescriptions from '$lib/components/page/property-page/property-descriptions/property-descriptions.svelte';
+	import PropertyRoomType from '$lib/components/page/property-page/property-room-type/property-room-type.svelte';
 
 	export let data: PageData;
 
