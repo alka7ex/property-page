@@ -7,6 +7,7 @@
 	import { Checkbox } from '$lib/components/ui/checkbox/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Label } from '$lib/components/ui/label/index.js';
+	import HotelCard from '$lib/components/page/property-list-page/hotel-card.svelte';
 </script>
 
 <div class="flex flex-col gap-6 p-4 md:flex-row md:p-6">
@@ -52,102 +53,10 @@
 			<Input class="w-full md:w-1/2" placeholder="Search..." type="text" />
 			<div class="w-full md:w-1/2" />
 		</div>
-		<div
-			class="group relative flex overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl md:flex-row"
-		>
-			<a class="absolute inset-0 z-10" href="#">
-				<span class="sr-only">View</span>
-			</a>
-			<img
-				alt="Property 1"
-				class="h-64 w-48 object-cover md:h-64 md:w-64"
-				height={400}
-				src="https://media.istockphoto.com/id/506903162/id/foto/vila-mewah-dengan-kolam-renang.jpg?s=1024x1024&w=is&k=20&c=uU01JTpXhgM5A7K8ICim2OxDBnEK-EHbHHn70kRDM3I="
-				style={{
-					aspectRatio: '300/400',
-					objectFit: 'cover'
-				}}
-				width={300}
-			/>
-			<div class="flex flex-col justify-between bg-slate-400 p-4 dark:bg-gray-950">
-				<div>
-					<h3 class="text-xl font-bold">Luxury Villa</h3>
-					<p class="mt-2 text-sm text-gray-500">123 Main St, Anytown</p>
-					<div class="mt-2 flex items-center gap-0.5">review rating</div>
-					<p class="mt-2 text-sm text-gray-500">4 Star Hotel</p>
-					<p class="mt-2 text-sm text-gray-500">Facilities: Pool, Gym, Free Wifi</p>
-				</div>
-				<div class="mt-4 flex items-end justify-between">
-					<h4 class="mt-2 text-lg font-semibold md:text-xl">$299 per night</h4>
-					<Button class="mt-4">Book Now</Button>
-				</div>
-			</div>
-		</div>
-		<div
-			class="group relative flex overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl md:flex-row"
-		>
-			<a class="absolute inset-0 z-10" href="#">
-				<span class="sr-only">View</span>
-			</a>
-			<img
-				alt="Property 2"
-				class="h-64 w-48 object-cover md:h-64 md:w-64"
-				height={400}
-				src="https://media.istockphoto.com/id/506903162/id/foto/vila-mewah-dengan-kolam-renang.jpg?s=1024x1024&w=is&k=20&c=uU01JTpXhgM5A7K8ICim2OxDBnEK-EHbHHn70kRDM3I="
-				style={{
-					aspectRatio: '300/400',
-					objectFit: 'cover'
-				}}
-				width={300}
-			/>
-			<div class="flex flex-col justify-between bg-white p-4 dark:bg-gray-950">
-				<div>
-					<h3 class="text-xl font-bold">Beach Resort</h3>
-					<p class="mt-2 text-sm text-gray-500">456 Beach Blvd, Seaside</p>
-					<div class="mt-2 flex items-center gap-0.5">review rating</div>
-					<p class="mt-2 text-sm text-gray-500">5 Star Hotel</p>
-					<p class="mt-2 text-sm text-gray-500">Facilities: Beach View, Spa, Free Wifi</p>
-				</div>
-				<div class="mt-4 flex items-end justify-between">
-					<h4 class="mt-2 text-lg font-semibold md:text-xl">$399 per night</h4>
-					<Button class="mt-4">Book Now</Button>
-				</div>
-			</div>
-		</div>
-		<div
-			class="group relative flex overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl md:flex-row"
-		>
-			<a class="absolute inset-0 z-10" href="#">
-				<span class="sr-only">View</span>
-			</a>
-			<img
-				alt="Property 3"
-				class="h-64 w-48 object-cover md:h-64 md:w-64"
-				height={400}
-				src="https://media.istockphoto.com/id/506903162/id/foto/vila-mewah-dengan-kolam-renang.jpg?s=1024x1024&w=is&k=20&c=uU01JTpXhgM5A7K8ICim2OxDBnEK-EHbHHn70kRDM3I="
-				style={{
-					aspectRatio: '300/400',
-					objectFit: 'cover'
-				}}
-				width={300}
-			/>
-			<div class="flex flex-col justify-between bg-white p-4 dark:bg-gray-950">
-				<div>
-					<h3 class="text-xl font-bold">Mountain Lodge</h3>
-					<p class="mt-2 text-sm text-gray-500">789 Peak Rd, Hillside</p>
-					<div class="mt-2 flex items-center gap-0.5">review rating</div>
-					<p class="mt-2 text-sm text-gray-500">3 Star Hotel</p>
-					<p class="mt-2 text-sm text-gray-500">
-						Facilities: Mountain View, Free Parking, Pet Friendly
-					</p>
-				</div>
-				<div class="mt-4 flex items-end justify-between">
-					<h4 class="mt-2 text-lg font-semibold md:text-xl">$199 per night</h4>
-					<Button class="mt-4">Book Now</Button>
-				</div>
-			</div>
-		</div>
-		<div class="mt-6 flex justify-center">
+		<HotelCard/>
+		<HotelCard/>
+		<HotelCard/>
+			<div class="mt-6 flex justify-center">
 			<Button class="mx-2">Prev</Button>
 			<Button class="mx-2">1</Button>
 			<Button class="mx-2">2</Button>
