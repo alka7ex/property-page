@@ -26,9 +26,9 @@
 			<p class="mt-1">4 Star Hotel</p>
 		</div>
 		<p class="mt-4">Facilities: Pool, Gym, Free Wifi</p>
-		<div class="flex items-center justify-between my-4">
+		<div class="flex items-center justify-between my-4 flex-col md:flex-row">
 			<div class="flex items-baseline">
-				<span class="text-4xl font-bold">$299</span>
+				<span class="text-2xl font-bold">$299</span>
 				<span class="ml-2 text-base text-gray-500">per night</span>
 			</div>
 			<Button class="self-end">Book Now</Button>

@@ -4,15 +4,27 @@
 	import PropertyDescriptions from '$lib/components/page/property-page/property-descriptions/property-descriptions.svelte';
 	import PropertyRoomType from '$lib/components/page/property-page/property-room-type/property-room-type.svelte';
 	import PhotoGalleryCarousel from '$lib/components/page/property-page/photo-gallery-carousel/photo-gallery-carousel.svelte';
+	import { Button } from '$lib/components/ui/button/index.js';
+	import { ArrowLeftIcon } from 'lucide-svelte';
 
 	export let data: PageData;
 
 </script>
-<div class="flex h-screen w-full flex-col">
-	<main class="flex-1 overflow-auto p-4">
+
+
+<div class="flex h-screen flex-col">
+	<main class="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+		<div class="flex items-center gap-4">
+			<Button size="icon" variant="outline">
+				<ArrowLeftIcon class="h-4 w-4" />
+				<span class="sr-only">Back</span>
+			</Button>
+			<h1 class="text-lg font-semibold md:text-xl">Property Details</h1>
+		</div>
+		<PhotoGalleryCarousel/>
+
     <!-- <PhotoGallery/> -->
-	<PhotoGalleryCarousel/>
-		<div class="container my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+		<div class="container px-2 lg:px-10 my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
 			<PropertyDescriptions />
 			<PropertyRoomType />
 		</div>

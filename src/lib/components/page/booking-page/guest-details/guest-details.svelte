@@ -19,7 +19,7 @@
 
   </script>
   
-  <Card.Root>
+  <Card.Root class="shadow-lg border">
     <Card.Header>
         <Card.Title>Guest Details</Card.Title>
     </Card.Header>

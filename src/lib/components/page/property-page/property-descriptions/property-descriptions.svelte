@@ -2,7 +2,7 @@
 	import * as Card from '$lib/components/ui/card/index.js';
 </script>
 
-<Card.Root class="">
+<Card.Root class="shadow-lg border">
     <Card.Header class="border-none">
         <h1 class="mb-4 text-2xl font-bold">Haikal Homey</h1>
     </Card.Header>
