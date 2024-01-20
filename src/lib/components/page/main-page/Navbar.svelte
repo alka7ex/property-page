@@ -2,9 +2,10 @@
 	import { page } from '$app/stores';
 	import { goto } from '$app/navigation';
 	import { Button } from "$lib/components/ui/button";
+	import logo from '$lib/images/grorental-_logo-white.webp';
 	import { Sun, Moon } from "lucide-svelte";
 	// import { toggleMode } from "mode-watcher";
-	import grorentallogo2 from '$lib/images/grorentallogo2.png';
+	import grorentallogo2 from '$lib/images/grorental-_logo-white.webp';
 
 	// const logoutHandler = () => {
 	// 	supabase.auth.signOut();
@@ -16,7 +17,7 @@
 	// console.log(data)
 	let nav = {
 		title: 'Svelte Tailwinds',
-		img: grorentallogo2,
+		img: logo,
 		listnavs: [
 			{
 				name: 'Home',
@@ -67,7 +68,7 @@
 	//  Checking via email is user logged in
 </script>
 
-<nav class="bg-transparent shadow">
+<nav class="bg-[#0038A8] py-4">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 justify-between">
 			<div class="flex">
