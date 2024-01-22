@@ -2,6 +2,8 @@
 	import { Badge } from '$lib/components/ui/badge';
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
+	import placeholder from '$lib/images/placeholder.svg.png';
+	export let hotel
 </script>
 
 <Card.Root class="flex w-full max-w-4xl rounded-xl bg-white shadow-lg">
@@ -9,23 +11,23 @@
 		<img
 			alt="Luxury Villa"
 			class="h-full w-full rounded-l-xl object-cover"
-			height="300"
-			src="https://assets-news.housing.com/news/wp-content/uploads/2022/02/27121904/featured-compressed-67.jpg"
+			height="200"
+			src= {placeholder}
 			style={{
-				aspectRatio: '684/300',
+				aspectRatio: '200/300',
 				objectFit: 'cover'
 			}}
-			width="684"
+			width="300"
 		/>
 	</div>
 	<Card.Content class="w-1/2 p-6">
-		<h2 class="text-2xl font-bold">Luxury Villa</h2>
-		<p class="mt-2 text-sm text-gray-500">123 Main St, Anytown</p>
-		<div class="mt-4">
+		<h2 class="text-2xl font-bold">{hotel.attributes.title}</h2>
+		<p class="mt-2 text-sm text-gray-500">{hotel.attributes.address}</p>
+		<!-- <div class="mt-4">
 			<Badge variant="secondary">review rating</Badge>
 			<p class="mt-1">4 Star Hotel</p>
-		</div>
-		<p class="mt-4">Facilities: Pool, Gym, Free Wifi</p>
+		</div> -->
+		<p class="mt-4"></p>
 		<div class="flex items-center justify-between my-4 flex-col md:flex-row">
 			<div class="flex items-baseline">
 				<span class="text-2xl font-bold">$299</span>

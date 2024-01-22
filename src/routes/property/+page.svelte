@@ -8,6 +8,9 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { Label } from '$lib/components/ui/label/index.js';
 	import HotelCard from '$lib/components/page/property-list-page/hotel-card.svelte';
+	import type { PageServerLoad } from './$types.js';
+	export let data: PageServerLoad;
+	console.log(data)
 </script>
 
 <div class="flex flex-col gap-6 p-4 md:flex-row md:p-6">
@@ -53,9 +56,9 @@
 			<Input class="w-full md:w-1/2" placeholder="Search..." type="text" />
 			<div class="w-full md:w-1/2" />
 		</div>
-		<HotelCard/>
-		<HotelCard/>
-		<HotelCard/>
+		{#each data.item.data as hotel}
+		<HotelCard {hotel} />
+	  	{/each}
 			<div class="mt-6 flex justify-center">
 			<Button class="mx-2">Prev</Button>
 			<Button class="mx-2">1</Button>

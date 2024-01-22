@@ -62,8 +62,11 @@
   "type": "module",
   "dependencies": {
     "@internationalized/date": "^3.5.1",
+    "@neondatabase/serverless": "^0.7.2",
     "bits-ui": "^0.14.0",
     "clsx": "^2.1.0",
+    "drizzle-kit": "^0.20.13",
+    "drizzle-orm": "^0.29.3",
     "embla-carousel-svelte": "^8.0.0-rc19",
     "lucide-svelte": "^0.309.0",
     "tailwind-merge": "^2.2.0",

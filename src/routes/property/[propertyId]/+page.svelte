@@ -6,6 +6,7 @@
 	import PhotoGalleryCarousel from '$lib/components/page/property-page/photo-gallery-carousel/photo-gallery-carousel.svelte';
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { ArrowLeftIcon } from 'lucide-svelte';
+	import PropertyInquiry from '$lib/components/page/property-page/property-inquiry/property-inquiry.svelte';
 
 	export let data: PageData;
 
@@ -19,14 +20,15 @@
 				<ArrowLeftIcon class="h-4 w-4" />
 				<span class="sr-only">Back</span>
 			</Button>
-			<h1 class="text-lg font-semibold md:text-xl">Property Details</h1>
+			<h1 class="text-2xl font-bold md:text-xl">Haikal Homey</h1>
 		</div>
 		<PhotoGalleryCarousel/>
 
     <!-- <PhotoGallery/> -->
 		<div class="container px-2 lg:px-10 my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
 			<PropertyDescriptions />
-			<PropertyRoomType />
+			<!-- <PropertyRoomType /> -->
+			<PropertyInquiry />
 		</div>
 	</main>
 </div>
