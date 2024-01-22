@@ -1,8 +1,4 @@
 <script lang="ts">
-	/**
-	 * v0 by Vercel.
-	 * @see https://v0.dev/t/IxhaEzAyfP3
-	 */
 	import { Input } from '$lib/components/ui/input/index.js';
 	import { Checkbox } from '$lib/components/ui/checkbox/index.js';
 	import { Button } from '$lib/components/ui/button/index.js';
@@ -56,9 +52,10 @@
 			<Input class="w-full md:w-1/2" placeholder="Search..." type="text" />
 			<div class="w-full md:w-1/2" />
 		</div>
-		{#each data.item.data as hotel}
+		<!-- {#each data.item.data as hotel}
 		<HotelCard {hotel} />
-	  	{/each}
+	  	{/each} -->
+		<HotelCard />
 			<div class="mt-6 flex justify-center">
 			<Button class="mx-2">Prev</Button>
 			<Button class="mx-2">1</Button>

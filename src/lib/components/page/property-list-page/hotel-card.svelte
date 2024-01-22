@@ -21,8 +21,14 @@
 		/>
 	</div>
 	<Card.Content class="w-1/2 p-6">
-		<h2 class="text-2xl font-bold">{hotel.attributes.title}</h2>
-		<p class="mt-2 text-sm text-gray-500">{hotel.attributes.address}</p>
+		<h2 class="text-2xl font-bold">
+			<!-- {hotel.attributes.title} -->
+			Haikal homey
+		</h2>
+		<p class="mt-2 text-sm text-gray-500">
+			<!-- {hotel.attributes.address} -->
+			Perum Green Cigedogan
+		</p>
 		<!-- <div class="mt-4">
 			<Badge variant="secondary">review rating</Badge>
 			<p class="mt-1">4 Star Hotel</p>
