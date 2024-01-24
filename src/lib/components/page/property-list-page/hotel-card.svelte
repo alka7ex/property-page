@@ -27,12 +27,13 @@
 		</h2>
 		<p class="mt-2 text-sm text-gray-500">
 			<!-- {hotel.attributes.address} -->
-			Perum Green Cigedogan
+			123 Main Street, City, Country
 		</p>
-		<!-- <div class="mt-4">
-			<Badge variant="secondary">review rating</Badge>
+		<div class="mt-4">
+			<!-- <Badge variant="secondary">review rating</Badge> -->
 			<p class="mt-1">4 Star Hotel</p>
-		</div> -->
+			<!-- <p class="text-sm">Lembang, Bandung</p> -->
+		</div>
 		<p class="mt-4"></p>
 		<div class="flex items-center justify-between my-4 flex-col md:flex-row">
 			<div class="flex items-baseline">

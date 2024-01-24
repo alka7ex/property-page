@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1706119232845,
+      "tag": "0000_jittery_famine",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1706119788875,
+      "tag": "0001_natural_satana",
+      "breakpoints": true
+    }
+  ]
+}
