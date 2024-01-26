@@ -71,6 +71,8 @@ export const photoRelations2 = relations(photos, ({ one }) => ({
 export const price = pgTable('price', {
   id: uuid('id').primaryKey().defaultRandom(),
   property_id: uuid('property_id').references(() => property.id).notNull(),
+  room_name: text('room_name'),
+  room_description: text('room_description'),
   price: integer('price'),
 })
 
@@ -81,4 +83,3 @@ export const priceRelation = relations(property, ({ one }) => ({
     references: [price.property_id]
   })
 }))
-

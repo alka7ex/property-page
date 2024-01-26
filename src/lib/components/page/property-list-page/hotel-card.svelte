@@ -45,7 +45,7 @@
 				  </span>
 				  <span class="my-auto text-base text-gray-500">/ night</span>
 			</div>
-			<Button class="self-end">Book Now</Button>
+			<Button class="self-end" href='/property/{propertyList.slug}'>Book Now</Button>
 		</div>
 	</Card.Content>
 </Card.Root>
