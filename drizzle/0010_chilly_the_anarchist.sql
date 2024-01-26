@@ -1,0 +1,1 @@
+ALTER TABLE "content" ALTER COLUMN "property_id" SET NOT NULL;

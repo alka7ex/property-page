@@ -1,0 +1,18 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "ssl": {
+                    "requestCert": true
+                }
+            },
+            "previewLimit": 50,
+            "server": "ep-holy-water-a13d5mq4-pooler.ap-southeast-1.aws.neon.tech",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "username": "farhienza.haikal",
+            "database": "grorental",
+            "name": "neon"
+        }
+    ]
+}

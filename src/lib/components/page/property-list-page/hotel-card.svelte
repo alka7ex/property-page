@@ -3,7 +3,8 @@
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import placeholder from '$lib/images/placeholder.svg.png';
-	export let hotel
+	export let propertyList:any ;
+	console.log(propertyList)
 </script>
 
 <Card.Root class="flex w-full max-w-4xl rounded-xl bg-white shadow-lg">
@@ -22,23 +23,27 @@
 	</div>
 	<Card.Content class="w-1/2 p-6">
 		<h2 class="text-2xl font-bold">
-			<!-- {hotel.attributes.title} -->
-			Haikal homey
+			{propertyList.property_name}
 		</h2>
 		<p class="mt-2 text-sm text-gray-500">
-			<!-- {hotel.attributes.address} -->
-			123 Main Street, City, Country
+			{propertyList.address}
 		</p>
-		<div class="mt-4">
-			<!-- <Badge variant="secondary">review rating</Badge> -->
-			<p class="mt-1">4 Star Hotel</p>
-			<!-- <p class="text-sm">Lembang, Bandung</p> -->
+
+		<div class="my-2">
+			<!-- <Badge variant="">4.9</Badge> -->
+			<p class="my-1 font-bold">{propertyList.property_type}</p>
 		</div>
+		<p class="mt-2 text-sm">
+			{propertyList.content.description}
+		</p>
 		<p class="mt-4"></p>
 		<div class="flex items-center justify-between my-4 flex-col md:flex-row">
-			<div class="flex items-baseline">
-				<span class="text-2xl font-bold">$299</span>
-				<span class="ml-2 text-base text-gray-500">per night</span>
+			<div class="flex items-baseline gap-1 my-auto">
+				<span class="text-2xl font-bold">{propertyList.currency}</span>
+				<span class="text-2xl font-bold">
+					{Number(propertyList.price.price).toLocaleString('id-ID')}
+				  </span>
+				  <span class="my-auto text-base text-gray-500">/ night</span>
 			</div>
 			<Button class="self-end">Book Now</Button>
 		</div>
