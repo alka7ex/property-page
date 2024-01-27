@@ -10,14 +10,14 @@
               Trusted by the best teams in the world. We help teams of all sizes.
           </p>
       </div>
-      <div class="grid w-full grid-cols-2 md:grid-cols-5 lg:gap-12">
+      <div class="grid w-full grid-cols-2 gap-y-4  md:gap-x-4 md:grid-cols-4 lg:grid-cols-5 place-items-center lg:gap-12">
           {#each Array(10) as _, index}
               <div class="mx-auto flex w-full items-center justify-center" key={index}>
                   <img
                       alt="Logo"
-                      class="aspect-[1/1] overflow-hidden rounded-lg object-contain object-center bg-green-200"
+                      class="bg-green-200 overflow-hidden rounded-lg object-contain object-center"
                       height="200"
-                      src={placeholder}
+                      src="https://logowik.com/content/uploads/images/agoda7659.jpg"
                       width="200"
                   />
               </div>

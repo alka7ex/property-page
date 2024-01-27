@@ -5,9 +5,9 @@
 
 <main>
     <div class="container min-h-screen bg-[#0038A8] text-white">
-        <header class="container mx-auto px-4 py-10 lg:py-20">
-            <div class="grid grid-cols-1 items-center gap-6 lg:grid-cols-2">
-                <div>
+        <header class="container mx-auto px-4 py-10">
+            <div class="grid grid-cols-1 items-center lg:grid-cols-2">
+                <div class="py-10">
                     <h1 class="mb-4 text-4xl lg:text-6xl font-bold leading-tight">Maximize your property revenue potential</h1>
                     <p class="mb-4 text-base lg:text-xl">
                         We are a tech-first, AI-enabled revenue growth partner for independent hotels and vacation rental properties.

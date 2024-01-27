@@ -4,102 +4,72 @@
 	import { Button } from '$lib/components/ui/button';
 	import placeholder from '$lib/images/placeholder.svg.png';
 </script>
-<section class="bg-zinc-700 text-white py-20">
-	<div class="grid-row grid mx-20">
+
+<section class="bg-zinc-700 py-20 text-white">
+	<div class="grid-row mx-20 grid">
 		<div class="mx-auto mb-20 flex flex-col items-center justify-center text-center">
 			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet our Clients</h2>
-			<p class="mx-auto max-w-[700px] dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+			<p
+				class="mx-auto max-w-[700px] dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+			>
 				Trusted by the best teams in the world. We help teams of all sizes.
 			</p>
-		</div>    
-		<div class="mx-auto flex justify-center gap-8">
+		</div>
+		<div class="mx-auto flex flex-col lg:flex-row justify-center gap-8">
 			<Card.Root class="max-w-xl">
 				<img
-				alt="Luxury Villa"
-				class="w-full"
-				height="200"
-				src={placeholder}
-				style={{
-					aspectRatio: '384/200',
-					objectFit: 'cover'
-				}}
-				width="300"
+					alt="Luxury Villa"
+					class="w-full overflow-hidden rounded-t-lg object-contain object-center"
+					height="200"
+					src="https://img.freepik.com/free-psd/panorama-luxury-living-room-generative-ai_587448-1919.jpg?w=1060&t=st=1706332194~exp=1706332794~hmac=c7532e6237ef7e1e370b307f4b2df9a5d51c8c76a665dc31515850e45e0c37f7"
+					width="300"
 				/>
-				<Card.Content>
+				<Card.Content class="my-6">
 					<h3 class="text-lg font-semibold">Luxury Villa</h3>
 					<p class="text-sm text-gray-500">123 Main St, Anytown</p>
-					<div class="mt-2 flex items-center">
-					<Badge variant="secondary">review rating</Badge>
-				</div>
-				<p class="mt-1 text-sm">4 Star Hotel</p>
-				<p class="mt-1 text-sm">Facilities: Pool, Gym, Free Wifi</p>
-				<div class="mt-4 flex items-baseline">
-					<span class="text-2xl font-semibold">$299</span>
-					<span class="ml-1 text-sm text-gray-500">per night</span>
-				</div>
-			</Card.Content>
-			<Card.Footer class="flex justify-end">
-				<Button>Book Now</Button>
-			</Card.Footer>
-		</Card.Root>
-		<Card.Root class="max-w-xl">
-			<img
-			alt="Luxury Villa"
-			class="w-full"
-			height="200"
-			src={placeholder}
-			style={{
-				aspectRatio: '384/200',
-				objectFit: 'cover'
-			}}
-				width="300"
+					<div class="my-2 flex items-center">
+						<Badge variant="">review rating</Badge>
+					</div>
+					<p class="my-2 text-sm">4 Star Apartment</p>
+					<p class="my-2 text-sm">Facilities: Pool, Gym, Free Wifi</p>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root class="max-w-xl">
+				<img
+					alt="Luxury Villa"
+					class="w-full overflow-hidden rounded-t-lg object-contain object-center"
+					height="200"
+					src="https://img.freepik.com/free-psd/panorama-luxury-living-room-generative-ai_587448-1919.jpg?w=1060&t=st=1706332194~exp=1706332794~hmac=c7532e6237ef7e1e370b307f4b2df9a5d51c8c76a665dc31515850e45e0c37f7"
+					width="300"
 				/>
-				<Card.Content>
+				<Card.Content class="my-6">
 					<h3 class="text-lg font-semibold">Luxury Villa</h3>
-				<p class="text-sm text-gray-500">123 Main St, Anytown</p>
-				<div class="mt-2 flex items-center">
-					<Badge variant="secondary">review rating</Badge>
-				</div>
-				<p class="mt-1 text-sm">4 Star Hotel</p>
-				<p class="mt-1 text-sm">Facilities: Pool, Gym, Free Wifi</p>
-				<div class="mt-4 flex items-baseline">
-					<span class="text-2xl font-semibold">$299</span>
-					<span class="ml-1 text-sm text-gray-500">per night</span>
-				</div>
-			</Card.Content>
-			<Card.Footer class="flex justify-end">
-				<Button>Book Now</Button>
-			</Card.Footer>
-		</Card.Root>
-		<Card.Root class="max-w-xl">
-			<img
-				alt="Luxury Villa"
-				class="w-full"
-				height="200"
-				src={placeholder}
-				style={{
-					aspectRatio: '384/200',
-					objectFit: 'cover'
-				}}
-				width="300"
+					<p class="text-sm text-gray-500">123 Main St, Anytown</p>
+					<div class="my-2 flex items-center">
+						<Badge variant="">review rating</Badge>
+					</div>
+					<p class="my-2 text-sm">4 Star Apartment</p>
+					<p class="my-2 text-sm">Facilities: Pool, Gym, Free Wifi</p>
+				</Card.Content>
+			</Card.Root>
+			<Card.Root class="max-w-xl">
+				<img
+					alt="Luxury Villa"
+					class="w-full overflow-hidden rounded-t-lg object-contain object-center"
+					height="200"
+					src="https://img.freepik.com/free-psd/panorama-luxury-living-room-generative-ai_587448-1919.jpg?w=1060&t=st=1706332194~exp=1706332794~hmac=c7532e6237ef7e1e370b307f4b2df9a5d51c8c76a665dc31515850e45e0c37f7"
+					width="300"
 				/>
-				<Card.Content>
-				<h3 class="text-lg font-semibold">Luxury Villa</h3>
-				<p class="text-sm text-gray-500">123 Main St, Anytown</p>
-				<div class="mt-2 flex items-center">
-					<Badge variant="secondary">review rating</Badge>
-				</div>
-				<p class="mt-1 text-sm">4 Star Hotel</p>
-				<p class="mt-1 text-sm">Facilities: Pool, Gym, Free Wifi</p>
-				<div class="mt-4 flex items-baseline">
-					<span class="text-2xl font-semibold">$299</span>
-					<span class="ml-1 text-sm text-gray-500">per night</span>
-				</div>
-			</Card.Content>
-			<Card.Footer class="flex justify-end">
-				<Button>Book Now</Button>
-			</Card.Footer>
-		</Card.Root>
-    </div>
-</div>
+				<Card.Content class="my-6">
+					<h3 class="text-lg font-semibold">Luxury Villa</h3>
+					<p class="text-sm text-gray-500">123 Main St, Anytown</p>
+					<div class="my-2 flex items-center">
+						<Badge variant="">review rating</Badge>
+					</div>
+					<p class="my-2 text-sm">4 Star Apartment</p>
+					<p class="my-2 text-sm">Facilities: Pool, Gym, Free Wifi</p>
+				</Card.Content>
+			</Card.Root>
+		</div>
+	</div>
 </section>

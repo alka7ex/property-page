@@ -7,11 +7,11 @@
     import { ReplaceIcon } from 'lucide-svelte';
 </script>
 
-<section class="bg-red-200 py-10 md:py-20">
+<section class="py-10 md:py-20">
     <div class="mx-4 md:mx-20">
 
         <!-- OTA Acceleration Card -->
-        <Card.Root class="mb-10">
+        <Card.Root class="mb-10 shadow-lg border-lg">
             <Card.Header class="mb-4 text-2xl md:text-3xl font-bold">OTA Acceleration</Card.Header>
             <Card.Content class="flex flex-col md:flex-row">
                 <div class="mb-4 md:mb-0 md:w-1/2">
@@ -49,7 +49,7 @@
         </Card.Root>
 
         <!-- Demand Acceleration Card -->
-        <Card.Root>
+        <Card.Root class="mb-10 shadow-lg border-lg">
             <Card.Header class="mb-4 text-2xl md:text-3xl font-bold justify-end">Demand acceleration</Card.Header>
             <Card.Content class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 md:flex md:flex-col md:space-y-4 md:pr-8">
