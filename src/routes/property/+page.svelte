@@ -6,7 +6,7 @@
 	import HotelCard from '$lib/components/page/property-list-page/hotel-card.svelte';
 	import type { PageData } from './$types.js';
 	export let data: PageData;
-	// console.log(data)
+	console.log(data)
 </script>
 
 <div class="flex flex-col gap-6 p-4 md:flex-row md:p-6">
@@ -56,11 +56,11 @@
 		<HotelCard propertyList={propertyList} />
 		{/each}
 			<div class="mt-6 flex justify-center">
-			<Button class="mx-2">Prev</Button>
+			<!-- <Button class="mx-2">Prev</Button>
 			<Button class="mx-2">1</Button>
 			<Button class="mx-2">2</Button>
 			<Button class="mx-2">3</Button>
-			<Button class="mx-2">Next</Button>
+			<Button class="mx-2">Next</Button> -->
 		</div>
 	</div>
 </div>

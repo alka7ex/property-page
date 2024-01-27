@@ -31,7 +31,8 @@ export const property = pgTable('property', {
   hotel_policy_id: uuid('hotel_policy_id'),
   default_tax_set_id: uuid('default_tax_set_id'),
   profile_id: uuid('profile_id'),
-  created_at: timestamp('created_at', { precision: 6, withTimezone: true }).defaultNow(),
+  created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+  // .defaultNow(),
 });
 
 export const contentRelations = relations(property, ({ one }) => ({
@@ -45,7 +46,8 @@ export const content = pgTable('content', {
   id: uuid('id').primaryKey().defaultRandom(),
   property_id: uuid('property_id').references(() => property.id).notNull(),
   description: text('description'),
-  created_at: timestamp('created_at', { precision: 6, withTimezone: true }).defaultNow(),
+  created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+  // .defaultNow(),
 });
 
 export const photoRelations = relations(content, ({ many }) => ({
@@ -57,7 +59,8 @@ export const photos = pgTable('photos', {
   id: uuid('id').primaryKey().defaultRandom(),
   content_id: uuid('content_id').references(() => content.id).notNull(),
   url: text('url'),
-  created_at: timestamp('created_at', { precision: 6, withTimezone: true }).defaultNow(),
+  created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+  // .defaultNow(),
 })
 
 export const photoRelations2 = relations(photos, ({ one }) => ({

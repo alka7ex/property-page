@@ -3,8 +3,10 @@
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import placeholder from '$lib/images/placeholder.svg.png';
+	import type { PageData } from '../../../../routes/property/$types.js';
+
 	export let propertyList:any ;
-	console.log(propertyList)
+	// console.log(propertyList)
 </script>
 
 <Card.Root class="flex w-full max-w-4xl rounded-xl bg-white shadow-lg">
@@ -13,7 +15,7 @@
 			alt="Luxury Villa"
 			class="h-full w-full rounded-l-xl object-cover"
 			height="200"
-			src= {placeholder}
+			src= {propertyList.content.photos[0].url}
 			style={{
 				aspectRatio: '200/300',
 				objectFit: 'cover'
