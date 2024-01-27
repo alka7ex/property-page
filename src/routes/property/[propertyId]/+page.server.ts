@@ -2,7 +2,6 @@ import type { PageServerLoad } from './$types.ts';
 import * as schema from '$lib/db/schema.js';
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
-import { eq } from 'drizzle-orm';
 
 const sql = neon(process.env.DRIZZLE_DATABASE_URL!);
 const db = drizzle(sql, { schema: schema });

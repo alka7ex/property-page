@@ -14,7 +14,7 @@
 				</p>
 				<Button class="flex flex-col items-center justify-center w-60 h-16 rounded-full flex-shrink-0 bg-[#FB607F]">Connect with us</Button>
 				<div class="mt-12">
-					<h2 class="mb-3 text-3xl font-bold"></h2>
+					<!-- <h2 class="mb-3 text-3xl font-bold"></h2> -->
 					<p></p>
 				</div>
 			</div>

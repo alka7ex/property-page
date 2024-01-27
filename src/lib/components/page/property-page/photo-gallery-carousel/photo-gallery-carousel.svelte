@@ -4,7 +4,7 @@
   export let propertyPhoto: any;
 </script>
 
-<Carousel.Root class="mx-auto w-full max-w-4xl">
+<Carousel.Root class="mx-auto w-full max-w-6xl">
   <Carousel.Content>
       {#each propertyPhoto.content.photos as photo (photo.id)}
           <Carousel.Item>
