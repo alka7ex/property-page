@@ -4,7 +4,7 @@
 	import { MailIcon, PhoneIcon, TextIcon } from 'lucide-svelte';
 </script>
 
-<Card.Root class="mt-24 w-full max-w-md">
+<Card.Root class="mt-24 w-full max-w-md shadow-lg border-none">
 	<Card.Header>
 		<Card.Title>Need Help? Contact Us</Card.Title>
 		<Card.Description>We're here ready to help you. Reach out to us via WhatsApp, or email.</Card.Description>

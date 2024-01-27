@@ -6,6 +6,7 @@
 	import HotelCard from '$lib/components/page/property-list-page/hotel-card.svelte';
 	import type { PageData } from './$types.js';
 	import SupportCard from '$lib/components/page/property-list-page/support-card.svelte';
+	import FilterCard from '$lib/components/page/property-list-page/filter-card.svelte';
 	export let data: PageData;
 	console.log(data)
 </script>
@@ -13,6 +14,7 @@
 <div class="flex flex-col gap-6 p-4 md:flex-row md:p-6">
 	<div class="flex flex-col gap-4 md:w-1/4">
 		<SupportCard />
+		<!-- <FilterCard /> -->
 	</div>
 	<div class="flex flex-col gap-6 md:w-3/4">
 		<div class="mb-6 flex items-center gap-4">
