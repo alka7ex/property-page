@@ -17,10 +17,10 @@
 		<!-- <FilterCard /> -->
 	</div>
 	<div class="flex flex-col gap-6 md:w-3/4">
-		<div class="mb-6 flex items-center gap-4">
+		<!-- <div class="mb-6 flex items-center gap-4">
 			<Input class="w-full md:w-1/2" placeholder="Search..." type="text" />
 			<div class="w-full md:w-1/2" />
-		</div>
+		</div> -->
 		{#each data.data as propertyList}
 		<HotelCard propertyList={propertyList} />
 		{/each}
