@@ -1,1 +1,0 @@
-ALTER TABLE "photos" ALTER COLUMN "content_id" SET NOT NULL;

@@ -13,10 +13,15 @@ export const load = (async ({params}) => {
         with: {
             content: {
                 with: {
-                    photos: true
+                    photos: true,
+                    facilities: true
                 }
             },
-            price: true
+            room_type: {
+                with: {
+                    rate_plans: true
+                }
+            },
         },
         where: (property, { eq }) => eq(property.slug, slug),
     });

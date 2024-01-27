@@ -15,12 +15,20 @@
 
 <div class="flex h-screen flex-col">
 	<main class="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
-		<div class="flex items-center gap-4">
-			<Button data-sveltekit-preload-data="hover" size="icon" variant="outline" href="/property">
+		<div class="flex items-center gap-4 justify-between">
+			<!-- <Button data-sveltekit-preload-data="hover" size="icon" variant="outline" href="/property">
 				<ArrowLeftIcon class="h-4 w-4" />
 				<span class="sr-only">Back</span>
-			</Button>
-			<h1 class="text-2xl font-bold md:text-xl">{data.data?.property_name}</h1>
+			</Button> -->
+			<h1 class="text-2xl font-bold">
+				<a href='/property/{data.data?.slug}'>{data.data?.property_name}</a>
+			</h1>
+			<h2 class="text-md font-semibold">
+				<a href="https://grorental.com">
+					Powered by GroRental
+				</a>
+			</h2>
+			
 		</div>
 		<PhotoGalleryCarousel propertyPhoto = {data.data}/>
 		<!-- <PhotoGallery/> -->

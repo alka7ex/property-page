@@ -1,1 +1,0 @@
-ALTER TABLE "property" ADD COLUMN "slug" text;

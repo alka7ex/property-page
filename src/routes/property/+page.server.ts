@@ -16,7 +16,11 @@ export const load = (async () => {
                     photos: true
                 }
             },
-            price: true
+            room_type: {
+                with: {
+                    rate_plans: true
+                }
+            },
         },
     });
     return { data: result }; // Return a plain object with the result

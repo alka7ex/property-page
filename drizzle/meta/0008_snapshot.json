@@ -1,6 +1,6 @@
 {
-  "id": "b4d545d2-6c35-4a55-baab-73aaa7fba43e",
-  "prevId": "c7c25fdf-a5e3-4a87-825a-cd9f485a2838",
+  "id": "9190b245-fb36-44db-a533-47e1d48dd9c1",
+  "prevId": "eaa25d24-b4f7-4852-a3f7-032823f93f00",
   "version": "5",
   "dialect": "pg",
   "tables": {
@@ -19,20 +19,13 @@
           "name": "property_id",
           "type": "uuid",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
-        "content_type": {
-          "name": "content_type",
+        "description": {
+          "name": "description",
           "type": "text",
           "primaryKey": false,
           "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp (6) with time zone",
-          "primaryKey": false,
-          "notNull": false,
-          "default": "now()"
         }
       },
       "indexes": {},
@@ -43,6 +36,49 @@
           "tableTo": "property",
           "columnsFrom": [
             "property_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "facilities": {
+      "name": "facilities",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "content_id": {
+          "name": "content_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "facilities_name": {
+          "name": "facilities_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "facilities_content_id_content_id_fk": {
+          "name": "facilities_content_id_content_id_fk",
+          "tableFrom": "facilities",
+          "tableTo": "content",
+          "columnsFrom": [
+            "content_id"
           ],
           "columnsTo": [
             "id"
@@ -69,20 +105,13 @@
           "name": "content_id",
           "type": "uuid",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "url": {
           "name": "url",
           "type": "text",
           "primaryKey": false,
           "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp (6) with time zone",
-          "primaryKey": false,
-          "notNull": false,
-          "default": "now()"
         }
       },
       "indexes": {},
@@ -117,6 +146,12 @@
         },
         "property_name": {
           "name": "property_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slug": {
+          "name": "slug",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -205,6 +240,12 @@
           "primaryKey": false,
           "notNull": false
         },
+        "google_maps_url": {
+          "name": "google_maps_url",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
         "property_type": {
           "name": "property_type",
           "type": "text",
@@ -235,15 +276,15 @@
           "primaryKey": false,
           "notNull": false
         },
-        "default_cancellation_policy_id": {
-          "name": "default_cancellation_policy_id",
-          "type": "uuid",
+        "cancellation_policy": {
+          "name": "cancellation_policy",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "hotel_policy_id": {
-          "name": "hotel_policy_id",
-          "type": "uuid",
+        "property_policy": {
+          "name": "property_policy",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
@@ -258,17 +299,102 @@
           "type": "uuid",
           "primaryKey": false,
           "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp (6) with time zone",
-          "primaryKey": false,
-          "notNull": false,
-          "default": "now()"
         }
       },
       "indexes": {},
       "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "rate_plans": {
+      "name": "rate_plans",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "room_type_id": {
+          "name": "room_type_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "rate_plan_name": {
+          "name": "rate_plan_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "price": {
+          "name": "price",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "rate_plans_room_type_id_room_type_id_fk": {
+          "name": "rate_plans_room_type_id_room_type_id_fk",
+          "tableFrom": "rate_plans",
+          "tableTo": "room_type",
+          "columnsFrom": [
+            "room_type_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "room_type": {
+      "name": "room_type",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "property_id": {
+          "name": "property_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "room_type_name": {
+          "name": "room_type_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "room_type_property_id_property_id_fk": {
+          "name": "room_type_property_id_property_id_fk",
+          "tableFrom": "room_type",
+          "tableTo": "property",
+          "columnsFrom": [
+            "property_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }

@@ -1,1 +1,0 @@
-ALTER TABLE "content" RENAME COLUMN "content_type" TO "description";

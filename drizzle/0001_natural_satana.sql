@@ -1,1 +1,0 @@
-ALTER TABLE "property" RENAME COLUMN "text" TO "state";

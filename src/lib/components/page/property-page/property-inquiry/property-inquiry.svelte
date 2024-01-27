@@ -27,8 +27,8 @@
 	// 	let startValue: DateValue | undefined = undefined;
 
 	function handleButtonClick() {
-	        const url = `https://wa.me/6281395951495?text=Hi%20Kak!,%20Saya%20tertarik%20untuk%20booking%20di%20${propertyInquiry.property_name}!`; // Construct the URL with date parameters
-			window.open(url, '_blank');
+		const url = `https://wa.me/6281395951495?text=Hi%20Kak!,%20Saya%20tertarik%20untuk%20booking%20di%20${propertyInquiry.property_name}!`; // Construct the URL with date parameters
+		window.open(url, '_blank');
 	}
 </script>
 
@@ -49,19 +49,19 @@
 							builders={[builder]}
 						>
 							<CalendarIcon class="mr-2 h-4 w-4" />
-							{#if value && value.start}
-								{#if value.end}
-									{df.format(value.start.toDate(getLocalTimeZone()))} - {df.format(
-										value.end.toDate(getLocalTimeZone())
-									)}
+								{#if value && value.start}
+									{#if value.end}
+										{df.format(value.start.toDate(getLocalTimeZone()))} - {df.format(
+											value.end.toDate(getLocalTimeZone())
+										)}
+									{:else}
+										{df.format(value.start.toDate(getLocalTimeZone()))}
+									{/if}
+								{:else if startValue}
+									{df.format(startValue.toDate(getLocalTimeZone()))}
 								{:else}
-									{df.format(value.start.toDate(getLocalTimeZone()))}
+									Pick a date
 								{/if}
-							{:else if startValue}
-								{df.format(startValue.toDate(getLocalTimeZone()))}
-							{:else}
-								Pick a date
-							{/if}
 						</Button>
 					</Popover.Trigger>
 					<Popover.Content class="w-auto p-0" align="start">
@@ -76,35 +76,37 @@
 				</Popover.Root>
 			</div>
 		</Card.Content> -->
-		<Card.Content class="flex rounded shadow-lg">
+		<div class="flex w-full flex-col justify-between rounded shadow-lg">
 			<Card.Header>
-				<Card.Title class="text-2xl font-bold">{propertyInquiry.price.room_name}</Card.Title>
-				<Card.Description class="text-md"
-					>{propertyInquiry.price.room_description}</Card.Description
+				<Card.Title class="text-2xl font-bold"
+					>{propertyInquiry.room_type.room_type_name}</Card.Title
 				>
-				<div class="flex">
-
-					<span class="text-xl font-semibold mr-2">{propertyInquiry.currency}</span>
-					<div class="text-xl font-semibold">
-						{Number(propertyInquiry.price.price).toLocaleString('id-ID')}
-					</div>
-					<span class="my-auto text-base text-gray-500">/night</span>
-				</div>
 			</Card.Header>
-			<Card.Content class="flex items-end justify-items-end">
-				<Button class="my-auto bg-black text-white" on:click={handleButtonClick}>Book Now</Button>
+
+			{#each propertyInquiry.room_type.rate_plans as propertyList}
+				<Card.Content class="flex justify-between">
+					<Card.Description class="text-lg text-black"
+						>{propertyList.rate_plan_name}</Card.Description
+					>
+					<Card.Title class="text-lg"
+						>{propertyInquiry.currency}
+						{Number(propertyList.price).toLocaleString('id-ID')} /night</Card.Title
+					>
+				</Card.Content>
+			{/each}
+			<Button class="mb-4 mr-4 self-end">Book Now</Button>
+		</div>
+
+		<div class="flex w-full flex-col justify-between rounded shadow-lg">
+			<Card.Header>
+				<Card.Title class="text-2xl font-bold">Google Maps</Card.Title>
+			</Card.Header>
+			<Card.Content class="flex flex-col items-center rounded shadow-lg">
+				<iframe class="w-full rounded" src='https://maps.google.com/maps?q={propertyInquiry.latitude},{propertyInquiry.longitude}&hl=es;z=14&amp;output=embed' title="Google Maps"
+				></iframe>
+				<!-- <iframe class="w-full rounded" src='https://maps.google.com/maps?q=wallts-house&hl=es;z=14&amp;output=embed' title="Google Maps"
+				></iframe> -->
 			</Card.Content>
-		</Card.Content>
+		</div>
 	</div>
 </Card.Root>
-
-<!-- <div class="my-4 flex flex-col items-center justify-between md:flex-row">
-	<div class="my-auto flex items-baseline gap-1">
-		<span class="text-2xl font-bold">{propertyList.currency}</span>
-		<span class="text-2xl font-bold">
-			{Number(propertyList.price.price).toLocaleString('id-ID')}
-		</span>
-		<span class="my-auto text-base text-gray-500">/ night</span>
-	</div>
-	<Button class="self-end" href="/property/{propertyList.slug}">Book Now</Button>
-</div> -->

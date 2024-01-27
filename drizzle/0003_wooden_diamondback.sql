@@ -1,1 +1,0 @@
-ALTER TABLE "property" ALTER COLUMN "state" SET DATA TYPE varchar(256);
