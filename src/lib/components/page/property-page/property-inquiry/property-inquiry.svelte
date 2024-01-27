@@ -85,16 +85,16 @@
 
 			{#each propertyInquiry.room_type.rate_plans as propertyList}
 				<Card.Content class="flex justify-between">
-					<Card.Description class="text-lg text-black"
+					<Card.Description class="text-sm text-black"
 						>{propertyList.rate_plan_name}</Card.Description
 					>
-					<Card.Title class="text-lg"
+					<Card.Title class="text-sm"
 						>{propertyInquiry.currency}
 						{Number(propertyList.price).toLocaleString('id-ID')} /night</Card.Title
 					>
 				</Card.Content>
 			{/each}
-			<Button class="mb-4 mr-4 self-end">Book Now</Button>
+			<Button class="mb-8 mr-8 self-end">Book Now</Button>
 		</div>
 
 		<div class="flex w-full flex-col justify-between rounded shadow-lg">
