@@ -27,8 +27,7 @@
         const whatsappNumber = guestDetail.phoneNumber;
 
         if (whatsappNumber) {
-            const whatsappUrl = `https://wa.me/6289608674394?text=Halo%20Tim%20GroRental!%0A%0ASaya%20${guestDetail.name}%20ingin%20booking%20villa%20${bookingdetails.property_name}%20dengan%20detail:%0ANama%20Villa:%20${bookingdetails.property_name}%0ACheckIn:%20${bookingdetails.checkInDate}%0ACheckOut:%20${bookingdetails.checkOutDate}%0ATipe%20Kamar:%20${bookingdetails.room_type}%0A%0AAtas%20nama:%0ANama:%20${guestDetail.name}%0AEmail:%20${guestDetail.email}%0ANomor%20Telepon:%20${guestDetail.phoneNumber}%0ASpesial%20Request:%20Ingin%20yang%20ada%20kolam%20renang
-`;
+            const whatsappUrl = `https://wa.me/6289608674394?text=Halo%20Tim%20GroRental!%0A%0ASaya%20${guestDetail.name}%20ingin%20booking%20villa%20${bookingdetails.property_name}%20dengan%20detail:%0ANama%20Villa:%20${bookingdetails.property_name}%0ACheckIn:%20${bookingdetails.checkInDate}%0ACheckOut:%20${bookingdetails.checkOutDate}%0ATipe%20Kamar:%20${bookingdetails.room_type}%0A%0AAtas%20nama:%0ANama:%20${guestDetail.name}%0AEmail:%20${guestDetail.email}%0ANomor%20Telepon:%20${guestDetail.phoneNumber}%0ASpesial%20Request:%20Ingin%20yang%20ada%20kolam%20renang`;
             window.open(whatsappUrl, '_blank');
         } else {
             console.error('Invalid WhatsApp number');
