@@ -18,14 +18,14 @@ export declare const load: () => Promise<{
         latitude: string | null;
         longitude: string | null;
         location_precision: string | null;
+        google_maps_url: string | null;
         property_type: string | null;
         property_category: string | null;
         website: string | null;
         logo_url: string | null;
-        default_cancellation_policy_id: string | null;
-        hotel_policy_id: string | null;
+        cancellation_policy: string | null;
+        property_policy: string | null;
         default_tax_set_id: string | null;
         profile_id: string | null;
-        created_at: Date | null;
     }[];
 }>;
