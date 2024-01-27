@@ -20,15 +20,15 @@
 				<ArrowLeftIcon class="h-4 w-4" />
 				<span class="sr-only">Back</span>
 			</Button>
-			<h1 class="text-2xl font-bold md:text-xl">Haikal Homey</h1>
+			<h1 class="text-2xl font-bold md:text-xl">{data.data?.property_name}</h1>
 		</div>
-		<PhotoGalleryCarousel/>
+		<PhotoGalleryCarousel propertyPhoto = {data.data}/>
+		<!-- <PhotoGallery/> -->
 
-    <!-- <PhotoGallery/> -->
 		<div class="container px-2 lg:px-10 my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-			<PropertyDescriptions />
+			<PropertyDescriptions  propertyDetails = {data.data} />
 			<!-- <PropertyRoomType /> -->
-			<PropertyInquiry />
+			<PropertyInquiry propertyInquiry = {data.data} />
 		</div>
 	</main>
 </div>

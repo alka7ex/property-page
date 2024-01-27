@@ -15,6 +15,7 @@
 	import * as Popover from '$lib/components/ui/popover';
 	import type { DateRange } from 'bits-ui';
 	import { RangeCalendar } from '$lib/components/ui/range-calendar/index.js';
+	export let propertyInquiry: any;
 
 	const df = new DateFormatter('en-US', {
 		dateStyle: 'medium'
@@ -29,8 +30,8 @@
 <Card.Root class="border-none shadow-none">
 	<h2 class="mb-4 text-2xl font-bold">Book a Room</h2>
 	<div class="grid grid-cols-1 gap-4">
-		<!-- <div class="rounded-lg p-4 shadow-lg border">
-			<h3 class="mb-2 text-lg font-bold">Select Dates</h3>
+		<div class="rounded-lg border p-4 shadow-lg">
+			<div class="mb-2 text-lg font-bold">Select Dates</div>
 			<div class="flex space-x-4">
 				<Popover.Root openFocus>
 					<Popover.Trigger asChild let:builder>
@@ -69,15 +70,18 @@
 					</Popover.Content>
 				</Popover.Root>
 			</div>
-		</div> -->
-		<Card.Content class="rounded-lg shadow-lg border p-4 flex flex-row justify-between">
-			<h2 class="mb-2 text-lg font-bold my-auto">Deluxe Room</h2>
-			<!-- <p class="mb-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-			<!-- <div class="container my-auto flex flex-row justify-end gap-4"> -->
-				<!-- <h2 class="my-auto text-right text-lg font-bold">$200/night</h2> -->
-				<Button class="my-auto rounded px-4 py-2 text-white" href="https://wa.me/6281395951495?text=Halo%20tim%20grorental%20saya%20ingin%20pesan%20villa%20dong!">Book Now</Button>
-			<!-- </div> -->
-		</Card.Content>
-		
+		</div>
+		<div class="flex rounded shadow-lg w-full justify-between items-center">
+			<Card.Header>
+				<Card.Title class="text-2xl font-bold">{propertyInquiry.price.room_name}</Card.Title>
+				<Card.Description class="text-md"
+					>{propertyInquiry.price.room_description}</Card.Description
+				>
+			</Card.Header>
+			<Card.Content class="flex items-center">
+				<div class="text-xl font-semibold">$200/night</div>
+				<Button class="ml-4 bg-black text-white">Book Now</Button>
+			</Card.Content>
+		</div>
 	</div>
 </Card.Root>

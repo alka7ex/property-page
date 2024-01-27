@@ -35,7 +35,7 @@
 			<!-- <Badge variant="">4.9</Badge> -->
 			<p class="my-1 font-bold">{propertyList.property_type}</p>
 		</div>
-		<p class="mt-2 text-sm">
+		<p class="mt-2 text-sm line-clamp-3">
 			{propertyList.content.description}
 		</p>
 		<p class="mt-4"></p>

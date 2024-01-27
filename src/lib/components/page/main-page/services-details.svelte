@@ -5,16 +5,17 @@
 	import { ReplaceIcon } from 'lucide-svelte';
 </script>
 
-<div class="bg-white mx-20">
-	<Card.Root class="mt-20 h-full">
-		<Card.Header class="mb-4 text-3xl font-bold">OTA Acceleration</Card.Header>
-		<Card.Content class="grid grid-cols-3 gap-10">
-			<div class="flex flex-col gap-8">
-				<Card.Description>
-					<p class="mb-6 text-lg font-bold">OTA Accelerators for Property Success</p>
-					<p>
-						Discover property success with GroRental's OTA Accelerators. Boost listings, manage
-						pricing, and dominate property searches within a 3km radius.
+<section class="bg-red-200 py-20">
+	<div class="mx-20">
+		<Card.Root class="h-full">
+			<Card.Header class="mb-4 text-3xl font-bold">OTA Acceleration</Card.Header>
+			<Card.Content class="grid grid-cols-3 gap-10">
+				<div class="flex flex-col gap-8">
+					<Card.Description>
+						<p class="mb-6 text-lg font-bold">OTA Accelerators for Property Success</p>
+						<p>
+							Discover property success with GroRental's OTA Accelerators. Boost listings, manage
+							pricing, and dominate property searches within a 3km radius.
 					</p>
 				</Card.Description>
 				<Card.Description>
@@ -44,7 +45,7 @@
 	</Card.Root>
 	<Card.Root class="mt-20">
 		<Card.Header class="mx-full mb-4 justify-end text-3xl font-bold"
-			>Demand acceleration</Card.Header
+		>Demand acceleration</Card.Header
 		>
 		<Card.Content class="grid grid-cols-3 gap-10">
 			<div class="my-auto">
@@ -57,11 +58,11 @@
 				</Card.Description>
 			</div>
 			<img
-				class="my-auto flex items-center justify-center object-cover"
-				src="https://static.wixstatic.com/media/ee2605_e517d50ef06148af8ad36213332d40a2~mv2.png/v1/crop/x_0,y_0,w_2620,h_1696/fill/w_491,h_318,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4.png"
-				alt="deman-acceleration"
+			class="my-auto flex items-center justify-center object-cover"
+			src="https://static.wixstatic.com/media/ee2605_e517d50ef06148af8ad36213332d40a2~mv2.png/v1/crop/x_0,y_0,w_2620,h_1696/fill/w_491,h_318,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/4.png"
+			alt="deman-acceleration"
 			/>
-
+			
 			<div class="container flex flex-col gap-8">
 				<Card.Description>
 					<p class="mb-6 text-lg font-bold">Boosting Organic Traffic and Sales</p>
@@ -83,3 +84,5 @@
 		</Card.Content>
 	</Card.Root>
 </div>
+
+</section>
