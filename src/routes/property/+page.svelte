@@ -11,7 +11,7 @@
 	console.log(data)
 </script>
 
-<div class="flex gap-6 p-4 md:flex-row md:p-6 flex-col-reverse">
+<div class="flex gap-6 p-4 md:p-6 flex-col-reverse lg:flex-row">
 	<div class="flex flex-col gap-4 md:w-1/4">
 		<SupportCard />
 		<!-- <FilterCard /> -->
