@@ -7,8 +7,8 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { ArrowLeftIcon } from 'lucide-svelte';
 	import PropertyInquiry from '$lib/components/page/property-page/property-inquiry/property-inquiry.svelte';
-
 	export let data: PageData;
+	console.log(data)
 
 </script>
 
