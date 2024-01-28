@@ -65,6 +65,7 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "dependencies": {
+    "@inlang/paraglide-js-adapter-sveltekit": "^0.2.5",
     "@internationalized/date": "^3.5.1",
     "@neondatabase/serverless": "^0.7.2",
     "bits-ui": "^0.14.0",
