@@ -5,6 +5,7 @@
     import * as Card from '$lib/components/ui/card';
     import CardContent from '$lib/components/ui/card/card-content.svelte';
     import { ReplaceIcon } from 'lucide-svelte';
+    import * as m from "$paraglide/messages"
 </script>
 
 <section class="py-10 md:py-20">
@@ -12,7 +13,7 @@
 
         <!-- OTA Acceleration Card -->
         <Card.Root class="mb-10 shadow-lg border-lg">
-            <Card.Header class="mb-4 text-2xl md:text-3xl font-bold">OTA Acceleration</Card.Header>
+            <Card.Header class="mb-4 text-2xl md:text-3xl font-bold">{m.homepage_services_title1()}</Card.Header>
             <Card.Content class="flex flex-col md:flex-row">
                 <div class="mb-4 md:mb-0 md:w-1/2">
                     <img
@@ -23,25 +24,21 @@
                 </div>
                 <div class="md:w-1/2 md:flex md:flex-col md:space-y-4 md:pl-8">
                     <Card.Description>
-                        <p class="mb-6 text-lg font-bold">OTA Accelerators for Property Success</p>
+                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle1()}</p>
                         <p>
-                            Discover property success with GroRental's OTA Accelerators. Boost listings, manage
-                            pricing, and dominate property searches within a 3km radius.
+                            {m.homepage_services_descriptions1()}
                         </p>
                     </Card.Description>
                     <Card.Description>
                         <p class="mb-6 text-lg font-bold">Digital Strategy Transformation</p>
                         <p>
-                            Transform your organization with GroRental. I can help develop and implement a digital
-                            strategy aligning with your business objectives. Stay ahead of the competition with our
-                            collaboration.
+                            {m.homepage_services_descriptions2()}
                         </p>
                     </Card.Description>
                     <Card.Description>
                         <p class="mb-6 text-lg font-bold">We are technology-first and use AI to solidify online</p>
                         <p>
-                            Our journey began with a clear mission: to empower owners to unlock the full potential of
-                            their property, harnessing every growth opportunity and maximizing profitability.
+                            {m.homepage_services_descriptions3()}
                         </p>
                     </Card.Description>
                 </div>
@@ -50,30 +47,24 @@
 
         <!-- Demand Acceleration Card -->
         <Card.Root class="mb-10 shadow-lg border-lg">
-            <Card.Header class="mb-4 text-2xl md:text-3xl font-bold justify-end">Demand acceleration</Card.Header>
+            <Card.Header class="mb-4 text-2xl md:text-3xl font-bold justify-end">{m.homepage_services_title2()}</Card.Header>
             <Card.Content class="flex flex-col md:flex-row">
                 <div class="md:w-1/2 md:flex md:flex-col md:space-y-4 md:pr-8">
                     <Card.Description>
-                        <p class="mb-6 text-lg font-bold">Your Booking Partner - GroRental</p>
+                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle2()}</p>
                         <p>
-                            When it comes to bookings, trust GroRental as your dedicated partner. We take charge of
-                            your property's digital presence, ensuring optimal visibility on Google Maps.
-                        </p>
+                            {m.homepage_services_descriptions4()}
                     </Card.Description>
                     <Card.Description>
                         <p class="mb-6 text-lg font-bold">Boosting Organic Traffic and Sales</p>
                         <p>
-                            Elevate your property's success with GroRental. We specialize in enhancing organic
-                            traffic and boosting offline sales through strategic measures and an expert internal
-                            sales team.
+                            {m.homepage_services_descriptions5()}
                         </p>
                     </Card.Description>
                     <Card.Description>
                         <p class="mb-6 text-lg font-bold">Guiding Growth Strategies</p>
                         <p>
-                            Let GroRental guide you to increased customer bases and heightened demand. With our
-                            expert guidance, we'll develop and implement strategies to transform your property's
-                            growth trajectory.
+                            {m.homepage_services_descriptions6()}
                         </p>
                     </Card.Description>
                 </div>

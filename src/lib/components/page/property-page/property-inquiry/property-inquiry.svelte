@@ -15,6 +15,7 @@
 	import * as Popover from '$lib/components/ui/popover';
 	import type { DateRange } from 'bits-ui';
 	import { RangeCalendar } from '$lib/components/ui/range-calendar/index.js';
+	import * as m from '$paraglide/messages'
 	export let propertyInquiry: any;
 
 	// 	const df = new DateFormatter('en-US', {
@@ -90,16 +91,16 @@
 					>
 					<Card.Title class="text-sm"
 						>{propertyInquiry.currency}
-						{Number(propertyList.price).toLocaleString('id-ID')} /night</Card.Title
+						{Number(propertyList.price).toLocaleString('id-ID')} {m.propertydetails_inquiry_pernight()}</Card.Title
 					>
 				</Card.Content>
 			{/each}
-			<Button class="mb-8 mr-8 self-end">Book Now</Button>
+			<Button class="mb-8 mr-8 self-end">{m.propertydetails_inquiry_button_booknow()}</Button>
 		</div>
 
 		<div class="flex w-full flex-col justify-between rounded shadow-lg">
 			<Card.Header>
-				<Card.Title class="text-2xl font-bold">Google Maps</Card.Title>
+				<Card.Title class="text-2xl font-bold">{m.propertydetails_inquiry_google_maps()}</Card.Title>
 			</Card.Header>
 			<Card.Content class="flex flex-col items-center rounded shadow-lg">
 				<iframe class="w-full rounded" src='https://maps.google.com/maps?q={propertyInquiry.latitude},{propertyInquiry.longitude}&hl=es;z=14&amp;output=embed' title="Google Maps"

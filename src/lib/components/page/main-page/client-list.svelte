@@ -3,16 +3,17 @@
 	import * as Card from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
 	import placeholder from '$lib/images/placeholder.svg.png';
+	import * as m from "$paraglide/messages"
 </script>
 
 <section class="bg-zinc-700 py-20 text-white">
 	<div class="grid-row mx-20 grid">
 		<div class="mx-auto mb-20 flex flex-col items-center justify-center text-center">
-			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Meet our Clients</h2>
+			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{m.homepage_client_title()}</h2>
 			<p
 				class="mx-auto max-w-[700px] dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
 			>
-				Trusted by the best teams in the world. We help teams of all sizes.
+				{m.homepage_client_descriptions()}
 			</p>
 		</div>
 		<div class="mx-auto flex flex-col lg:flex-row justify-center gap-8">

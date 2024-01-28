@@ -1,6 +1,7 @@
 <script context="module" lang="ts">
     import { Button } from '$lib/components/ui/button';
     import logo from '$lib/images/beach-house-bro.svg';
+    import * as m from "$paraglide/messages"
 </script>
 
 <main>
@@ -8,11 +9,11 @@
         <header class="container mx-auto px-4 py-10">
             <div class="grid grid-cols-1 items-center lg:grid-cols-2">
                 <div class="py-10">
-                    <h1 class="mb-4 text-4xl lg:text-6xl font-bold leading-tight">Maximize your property revenue potential</h1>
+                    <h1 class="mb-4 text-4xl lg:text-6xl font-bold leading-tight">{m.homepage_header_h1()}</h1>
                     <p class="mb-4 text-base lg:text-xl">
-                        We are a tech-first, AI-enabled revenue growth partner for independent hotels and vacation rental properties.
+                        {m.homepage_header_p()}
                     </p>
-                    <Button class="w-56 h-16 rounded-full bg-[#FB607F]">Connect with us</Button>
+                    <Button class="w-56 h-16 rounded-full bg-[#FB607F]">{m.homepage_header_button_contact_us()}</Button>
                     <div class="mt-8">
                     </div>
                 </div>

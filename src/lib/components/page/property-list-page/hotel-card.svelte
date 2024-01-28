@@ -4,6 +4,7 @@
 	import * as Card from '$lib/components/ui/card';
 	import placeholder from '$lib/images/placeholder.svg.png';
 	import type { PageData } from '../../../../routes/property/$types.js';
+	import * as m from "$paraglide/messages"
 
 	export let propertyList:any ;
 	// console.log(propertyList)
@@ -45,9 +46,9 @@
 				<span class="text-2xl font-bold">
 					{Number(propertyList.room_type.rate_plans[0].price).toLocaleString('id-ID')}
 				  </span>
-				  <span class="my-auto text-base text-gray-500">/ night</span>
+				  <span class="my-auto text-base text-gray-500">{m.propertylist_hotelcard_pernight()}</span>
 			</div>
-			<Button class="self-end" href='/property/{propertyList.slug}'>Book Now</Button>
+			<Button class="self-end" href='/property/{propertyList.slug}'>{m.propertylist_hotelcard_button_booknow()}</Button>
 		</div>
 	</Card.Content>
 </Card.Root>
