@@ -95,7 +95,7 @@
 					>
 				</Card.Content>
 			{/each}
-			<Button class="mb-8 mr-8 self-end">{m.propertydetails_inquiry_button_booknow()}</Button>
+			<Button class="mb-8 mr-8 self-end" on:click={handleButtonClick}>{m.propertydetails_inquiry_button_booknow()}</Button>
 		</div>
 
 		<div class="flex w-full flex-col justify-between rounded shadow-lg">

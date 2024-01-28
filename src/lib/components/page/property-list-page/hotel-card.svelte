@@ -48,7 +48,7 @@
 				  </span>
 				  <span class="my-auto text-base text-gray-500">{m.propertylist_hotelcard_pernight()}</span>
 			</div>
-			<Button class="self-end" href='/property/{propertyList.slug}'>{m.propertylist_hotelcard_button_booknow()}</Button>
+			<Button class="self-end" href='/property/{propertyList.slug} '>{m.propertylist_hotelcard_button_booknow()}</Button>
 		</div>
 	</Card.Content>
 </Card.Root>
