@@ -4,7 +4,6 @@ import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
 import { PUBLIC_DRIZZLE_DATABASE_URL } from '$env/static/public';
 
-
 const sql = neon(PUBLIC_DRIZZLE_DATABASE_URL!);
 const db = drizzle(sql, { schema: schema });
 

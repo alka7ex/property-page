@@ -6,8 +6,8 @@
 </script>
 
 <div class="bg-background h-screen">
-	<Navbar/>
 <ParaglideJS {i18n}>
+	<Navbar/>
 	<slot />
 </ParaglideJS>
 </div>
