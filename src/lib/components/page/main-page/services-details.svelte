@@ -30,13 +30,13 @@
                         </p>
                     </Card.Description>
                     <Card.Description>
-                        <p class="mb-6 text-lg font-bold">Digital Strategy Transformation</p>
+                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle3()}</p>
                         <p>
                             {m.homepage_services_descriptions2()}
                         </p>
                     </Card.Description>
                     <Card.Description>
-                        <p class="mb-6 text-lg font-bold">We are technology-first and use AI to solidify online</p>
+                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle4()}</p>
                         <p>
                             {m.homepage_services_descriptions3()}
                         </p>
@@ -56,13 +56,13 @@
                             {m.homepage_services_descriptions4()}
                     </Card.Description>
                     <Card.Description>
-                        <p class="mb-6 text-lg font-bold">Boosting Organic Traffic and Sales</p>
+                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle5()}</p>
                         <p>
                             {m.homepage_services_descriptions5()}
                         </p>
                     </Card.Description>
                     <Card.Description>
-                        <p class="mb-6 text-lg font-bold">Guiding Growth Strategies</p>
+                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle6()}</p>
                         <p>
                             {m.homepage_services_descriptions6()}
                         </p>

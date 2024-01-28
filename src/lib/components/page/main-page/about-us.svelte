@@ -17,7 +17,7 @@
 			/>
 		</Card.Content>
 		<Card.Content class="md:flex md:w-1/2 md:flex-col md:space-y-4">
-			<Card.Title class="mb-2 text-2xl font-bold md:text-3xl">About us</Card.Title>
+			<Card.Title class="mb-2 text-2xl font-bold md:text-3xl">{m.homepage_about_us_title2()}</Card.Title>
 			<Card.Description class="mb-4 text-lg font-bold">
 				{m.homepage_about_us_title()}
 			</Card.Description>
