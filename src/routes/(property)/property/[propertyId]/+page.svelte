@@ -35,7 +35,7 @@
 
 		<div class="container px-2 lg:px-10 my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
 			<PropertyDescriptions  propertyDetails = {data.data} />
-			<PropertyRoomType />
+			<!-- <PropertyRoomType /> -->
 			<PropertyInquiry propertyInquiry = {data.data} />
 		</div>
 	</main>

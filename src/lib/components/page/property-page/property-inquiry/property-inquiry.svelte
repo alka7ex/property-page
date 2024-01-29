@@ -27,10 +27,6 @@
 	// 	};
 	// 	let startValue: DateValue | undefined = undefined;
 
-	function handleButtonClick() {
-		const url = `https://wa.me/6281395951495?text=Hi%20Kak!,%20Saya%20tertarik%20untuk%20booking%20di%20${propertyInquiry.property_name}!`; // Construct the URL with date parameters
-		window.open(url, '_blank');
-	}
 </script>
 
 <Card.Root class="border-none shadow-none">
@@ -95,7 +91,7 @@
 					>
 				</Card.Content>
 			{/each}
-			<Button class="mb-8 mr-8 self-end" on:click={handleButtonClick}>{m.propertydetails_inquiry_button_booknow()}</Button>
+			<Button class="mb-8 mr-8 self-end" href='https://wa.me/6281395951495?text=Hi%20Kak!,%20Saya%20tertarik%20untuk%20booking%20di%20{propertyInquiry.property_name}!'>{m.propertydetails_inquiry_button_booknow()}</Button>
 		</div>
 
 		<div class="flex w-full flex-col justify-between rounded shadow-lg">
