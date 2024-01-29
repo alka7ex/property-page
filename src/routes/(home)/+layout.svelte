@@ -5,9 +5,9 @@
 	import { i18n } from '$lib/i18n.js';
 </script>
 
-<div class="bg-background h-screen">
-<ParaglideJS {i18n}>
-	<Navbar/>
-	<slot />
-</ParaglideJS>
+<div class="h-screen bg-background">
+	<ParaglideJS {i18n}>
+		<Navbar />
+		<slot />
+	</ParaglideJS>
 </div>
