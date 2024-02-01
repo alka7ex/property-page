@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types.js';
+	import type { PageData } from '../[bookingid]/$types.js';
     import { Button } from "$lib/components/ui/button/index.js";
 	import { ArrowLeftIcon } from 'lucide-svelte';
 	import GuestDetails from '$lib/components/page/booking-page/guest-details/guest-details.svelte';

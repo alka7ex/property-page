@@ -7,36 +7,50 @@
 	import { Button } from '$lib/components/ui/button/index.js';
 	import { ArrowLeftIcon } from 'lucide-svelte';
 	import PropertyInquiry from '$lib/components/page/property-page/property-inquiry/property-inquiry.svelte';
-	export let data: PageData;
-	console.log(data)
+	import * as Card from '$lib/components/ui/card/index.js';
+	import * as m from '$paraglide/messages';
 
+	export let data: PageData;
+	console.log(data);
 </script>
 
-
-<div class="flex h-screen flex-col">
-	<main class="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
-		<div class="flex items-center gap-4 justify-between">
+<div class="flex min-h-screen flex-col">
+	<main class="flex-1">
+		<div class="container flex h-16 items-center justify-between gap-4 bg-[#FEF2F4]">
 			<!-- <Button data-sveltekit-preload-data="hover" size="icon" variant="outline" href="/property">
 				<ArrowLeftIcon class="h-4 w-4" />
 				<span class="sr-only">Back</span>
 			</Button> -->
 			<h1 class="text-2xl font-bold">
-				<a href='/property/{data.data?.slug}'>{data.data?.property_name}</a>
+				<a href="/property/{data.data?.slug}">{data.data?.property_name}</a>
 			</h1>
-			<h2 class="text-md font-semibold">
-				<a href="https://grorental.com">
-					Powered by GroRental
-				</a>
-			</h2>
-			
 		</div>
-		<PhotoGalleryCarousel propertyPhoto = {data.data}/>
-		<!-- <PhotoGallery/> -->
+		<div class="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
+			<PhotoGalleryCarousel propertyPhoto={data.data} />
+			<!-- <PhotoGallery/> -->
 
-		<div class="container px-2 lg:px-10 my-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-			<PropertyDescriptions  propertyDetails = {data.data} />
-			<!-- <PropertyRoomType /> -->
-			<PropertyInquiry propertyInquiry = {data.data} />
+			<div class="container grid grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:px-10">
+				<PropertyDescriptions propertyDetails={data.data} />
+				<!-- <PropertyRoomType /> -->
+				<PropertyInquiry propertyInquiry={data.data} />
+			</div>
+			<div class="container px-2 md:grid-cols-2 lg:px-10">
+				<Card.Root class="border-none bg-[#FEF2F4] shadow-lg">
+					<Card.Header>
+						<Card.Title class="text-2xl font-bold"
+						>{m.propertydetails_inquiry_google_maps()}</Card.Title
+						>
+					</Card.Header>
+					<Card.Content class="flex flex-col items-center">
+						<iframe
+						class="w-full rounded"
+						src="https://maps.google.com/maps?q={data.data?.latitude},{data.data
+							?.longitude}&hl=es;z=14&amp;output=embed"
+						title="Google Maps"
+						></iframe>
+					</Card.Content>
+				</Card.Root>
+			</div>
 		</div>
 	</main>
 </div>

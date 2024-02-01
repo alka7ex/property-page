@@ -31,10 +31,12 @@
 	"propertydetails_descriptions_address": "Alamat",
 	"propertydetails_inquiry_pernight": "/malam",
 	"propertydetails_inquiry_button_booknow": "Pesan sekarang",
-	"propertydetails_inquiry_google_maps": "Google Peta",
+	"propertydetails_inquiry_google_maps": "Google Maps",
 	"homepage_services_subtitle3": "Transformasi Strategi Digital",
 	"homepage_services_subtitle4": "Kami mengutamakan teknologi dan menggunakan AI untuk memperkuat bisnis online",
 	"homepage_services_subtitle5": "Meningkatkan Lalu Lintas dan Penjualan Organik",
 	"homepage_services_subtitle6": "Memandu Strategi Pertumbuhan",
-	"homepage_about_us_title2": "Tentang kami"
+	"homepage_about_us_title2": "Tentang kami",
+	"propertydetails_inqury_h2": "Pesan Kamar",
+	"footer_tag": "Dikelola oleh GroRental"
 }

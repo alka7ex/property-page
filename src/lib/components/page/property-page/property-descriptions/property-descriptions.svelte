@@ -4,12 +4,12 @@
 	export let propertyDetails: any;
 </script>
 
-<Card.Root class="border shadow-lg">
-	<Card.Header class="border-none">
+<Card.Root class="border shadow-lg bg-[#FEF2F4] border-none">
+	<Card.Header class="">
 		<h1 class=" text-2xl font-bold">{propertyDetails.property_name}</h1>
 	</Card.Header>
 	<Card.Content class="border-none">
-		<Card.Description class="border-none">
+		<Card.Description class="border-none text-black">
 			<p class="my-2">
 				{propertyDetails.content.description}
 			</p>

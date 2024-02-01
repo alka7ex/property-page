@@ -10,7 +10,7 @@
 	// console.log(propertyList)
 </script>
 
-<Card.Root class="flex w-full max-w-4xl rounded-xl bg-white shadow-lg">
+<Card.Root class="flex w-full max-w-4xl rounded-xl shadow-lg bg-[#F1F4FA]">
 	<div class="w-1/2">
 		<img
 			alt="Luxury Villa"
