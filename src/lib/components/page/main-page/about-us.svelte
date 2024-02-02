@@ -7,8 +7,8 @@
     import * as m from "$paraglide/messages"
 </script>
 
-<section class="py-10 md:py-20">
-	<Card.Root class="mx-4 flex flex-col p-6 shadow-lg md:mx-20 md:flex-row">
+<section class="py-10">
+	<Card.Root class="mx-4 flex flex-col p-6 shadow-lg md:mx-10 md:flex-row">
 		<Card.Content class="md:w-1/2 md:flex-none md:rounded-lg">
 			<img
 				alt="Rental Property"

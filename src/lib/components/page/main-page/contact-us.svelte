@@ -1,145 +1,59 @@
 <script lang="ts">
-	/**
-	 * v0 by Vercel.
-	 * @see https://v0.dev/t/iwOlWKNU3Rj
-	 * Documentation: https://v0.dev/docs#integrating-generated-code-into-your-nextjs-app
-	 */
 	import { Input } from '$lib/components/ui/input';
-	import { PhoneIcon, MailboxIcon, ChevronDownIcon} from 'lucide-svelte';
+	import { PhoneIcon, MailboxIcon, ChevronDownIcon, MailIcon, LocateIcon } from 'lucide-svelte';
+	import { Label } from '$lib/components/ui/label';
+	import { Textarea } from '$lib/components/ui/textarea';
+	import { Button } from '$lib/components/ui/button';
+	import * as Card from '$lib/components/ui/card';
 </script>
 
-<div class="bg-[hsl(226,100%,90%)] text-black">
-	<div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-			<div>
-				<h2 class="text-3xl font-bold mb-8">Contact us</h2>
-				<div class="space-y-6">
-					<div class="flex items-center space-x-4">
-						<PhoneIcon class="text-black" />
-						<div>
-							<p class="font-semibold">+91-1234 56789</p>
-							<p class="text-sm">Call us for assistance</p>
-						</div>
-					</div>
-					<div class="flex items-center space-x-4">
-						<MailboxIcon class="text-black" />
-						<div>
-							<p class="font-semibold">connect@grorental.com</p>
-							<p class="text-sm">Send us an email today</p>
-						</div>
-					</div>
-				</div>
-				<div class="mt-12">
-					<h3 class="text-2xl font-bold mb-4">Send Us Your Details</h3>
-					<Input class="mb-4" placeholder="Name" type="text" />
-					<Input class="mb-4" placeholder="Number" type="text" />
-					<Input placeholder="Mail" type="email" />
-				</div>
-			</div>
-			<div class="lg:col-span-2">
-				<div class="bg-white text-gray-800 rounded-lg shadow overflow-hidden">
-					<div class="p-8">
-						<h3 class="text-2xl font-bold mb-4">Frequently Asked Questions?</h3>
+<section class="w-full bg-[hsl(226,100%,90%)] py-10 text-black my-10" id="contact-us">
+	<Card.Root class="mx-5 lg:mx-10">
+		<Card.Content class="container">
+			<div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
+				<div class="space-y-4">
+					<Card.Header class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+						>Contact Us</Card.Header
+					>
+					<Card.Content>
+						<p
+							class="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						>
+							We'd love to hear from you. Please fill out the form below and we'll get back to you
+							as soon as possible.
+						</p>
 						<div class="space-y-4">
-							<details class="group">
-								<summary
-									class="flex justify-between items-center p-4 rounded-lg bg-gray-100 cursor-pointer group-open:bg-gray-200"
-								>
-									<span>Q1: Common Question line expand interactable</span>
-									<!-- svelte-ignore missing-declaration -->
-									<ChevronDownIcon class="text-gray-500" />
-								</summary>
-								<p class="px-4 pb-4 text-sm">Answer to the question goes here.</p>
-							</details>
-							<details class="group">
-								<summary
-									class="flex justify-between items-center p-4 rounded-lg bg-gray-100 cursor-pointer group-open:bg-gray-200"
-								>
-									<span>Q2: Common Question line expand interactable</span>
-									<ChevronDownIcon class="text-gray-500" />
-								</summary>
-								<p class="px-4 pb-4 text-sm">Answer to the question goes here.</p>
-							</details>
-							<details class="group">
-								<summary
-									class="flex justify-between items-center p-4 rounded-lg bg-gray-100 cursor-pointer group-open:bg-gray-200"
-								>
-									<span>Q3: Common Question line expand interactable</span>
-									<ChevronDownIcon class="text-gray-500" />
-								</summary>
-								<p class="px-4 pb-4 text-sm">Answer to the question goes here.</p>
-							</details>
-							<details class="group">
-								<summary
-									class="flex justify-between items-center p-4 rounded-lg bg-gray-100 cursor-pointer group-open:bg-gray-200"
-								>
-									<span>Q4: Common Question line expand interactable</span>
-									<ChevronDownIcon class="text-gray-500" />
-								</summary>
-								<p class="px-4 pb-4 text-sm">Answer to the question goes here.</p>
-							</details>
-							<details class="group">
-								<summary
-									class="flex justify-between items-center p-4 rounded-lg bg-gray-100 cursor-pointer group-open:bg-gray-200"
-								>
-									<span>Q5: Common Question line expand interactable</span>
-									<ChevronDownIcon class="text-gray-500" />
-								</summary>
-								<p class="px-4 pb-4 text-sm">Answer to the question goes here.</p>
-							</details>
+							<div class="space-y-2">
+								<Label htmlFor="name">Name</Label>
+								<Input id="name" placeholder="Enter your name" />
+							</div>
+							<div class="space-y-2">
+								<Label htmlFor="email">Email</Label>
+								<Input id="email" placeholder="Enter your email" type="email" />
+							</div>
+							<div class="space-y-2">
+								<Label htmlFor="message">Message</Label>
+								<Textarea class="min-h-[100px]" id="message" placeholder="Enter your message" />
+							</div>
+							<Button>Send message</Button>
 						</div>
+					</Card.Content>
+				</div>
+				<Card.Content class="space-y-4 mt-10 ">
+					<div class="flex items-center space-x-2">
+						<PhoneIcon class="h-6 w-6" />
+						<span>+1 (123) 456-7890</span>
 					</div>
-				</div>
+					<div class="flex items-center space-x-2">
+						<MailIcon class="h-6 w-6" />
+						<span>info@acme.com</span>
+					</div>
+					<div class="flex items-center space-x-2">
+						<LocateIcon class="h-6 w-6" />
+						<span>123 Main St, Anytown, USA</span>
+					</div>
+				</Card.Content>
 			</div>
-		</div>
-		<footer class="mt-12 border-t border-white/10 pt-8">
-			<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-				<div>
-					<h4 class="text-lg font-semibold mb-4">Home</h4>
-					<ul class="space-y-2">
-						<li>
-							<a class="hover:underline" href="#">Direct a 1</a>
-						</li>
-						<li>
-							<a class="hover:underline" href="#">a to 2</a>
-						</li>
-						<li>
-							<a class="hover:underline" href="#">a to 2</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h4 class="text-lg font-semibold mb-4">About Us</h4>
-					<ul class="space-y-2">
-						<li>
-							<a class="hover:underline" href="#">Direct a 1</a>
-						</li>
-						<li>
-							<a class="hover:underline" href="#">a to 2</a>
-						</li>
-						<li>
-							<a class="hover:underline" href="#">a to 2</a>
-						</li>
-					</ul>
-				</div>
-				<div>
-					<h4 class="text-lg font-semibold mb-4">Services</h4>
-					<ul class="space-y-2">
-						<li>
-							<a class="hover:underline" href="#">Direct a 1</a>
-						</li>
-						<li>
-							<a class="hover:underline" href="#">a to 2</a>
-						</li>
-						<li>
-							<a class="hover:underline" href="#">a to 2</a>
-						</li>
-					</ul>
-				</div>
-				<div class="flex justify-end">
-					<h4 class="text-4xl font-bold">Logo</h4>
-				</div>
-			</div>
-		</footer>
-	</div>
-</div>
+		</Card.Content>
+	</Card.Root>
+</section>

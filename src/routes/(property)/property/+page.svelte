@@ -11,6 +11,10 @@
 	console.log(data)
 </script>
 
+<svelte:head>
+	<title>Book your property</title>
+</svelte:head>
+
 <div class="flex gap-6 p-4 md:p-6 flex-col-reverse lg:flex-row">
 	<div class="flex flex-col gap-4 md:w-1/4">
 		<SupportCard />

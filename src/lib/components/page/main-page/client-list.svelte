@@ -6,7 +6,7 @@
 	import * as m from "$paraglide/messages"
 </script>
 
-<section class="bg-zinc-700 py-20 text-white">
+<section class="bg-slate-700 py-20 text-white">
 	<div class="grid-row mx-20 grid">
 		<div class="mx-auto mb-20 flex flex-col items-center justify-center text-center">
 			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{m.homepage_client_title()}</h2>
