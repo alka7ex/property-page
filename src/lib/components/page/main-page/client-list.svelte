@@ -19,56 +19,66 @@
 		<div class="mx-auto flex flex-col lg:flex-row justify-center gap-8">
 			<Card.Root class="max-w-xl">
 				<img
-					alt="Luxury Villa"
-					class="w-full overflow-hidden rounded-t-lg object-contain object-center"
+					alt="Wallts House"
+					class="w-full aspect-video overflow-hidden object-cover rounded-t-lg object-center"
 					height="200"
-					src="https://img.freepik.com/free-psd/panorama-luxury-living-room-generative-ai_587448-1919.jpg?w=1060&t=st=1706332194~exp=1706332794~hmac=c7532e6237ef7e1e370b307f4b2df9a5d51c8c76a665dc31515850e45e0c37f7"
+					src="https://a0.muscache.com/im/pictures/miso/Hosting-754046645046468650/original/44e03f8f-2b8e-4206-867e-b3a1b2d75a56.jpeg?im_w=960"
 					width="300"
 				/>
 				<Card.Content class="my-6">
-					<h3 class="text-lg font-semibold">Luxury Villa</h3>
-					<p class="text-sm text-gray-500">123 Main St, Anytown</p>
+					<h3 class="text-lg font-semibold">Wallts House</h3>
+					<p class="text-sm text-gray-500">Jl. Kawaluyaan Indah Raya No.28, Jatisari, Kec. Buahbatu, Kota Bandung, Jawa Barat 40286</p>
 					<div class="my-2 flex items-center">
-						<Badge variant="">review rating</Badge>
+						<Badge variant="">Villa Bintang 4</Badge>
 					</div>
-					<p class="my-2 text-sm">4 Star Apartment</p>
-					<p class="my-2 text-sm">Facilities: Pool, Gym, Free Wifi</p>
+					<!-- <p class="my-2 text-sm">4 Star Apartment</p> -->
+					<p class="my-2 text-sm">Fasilitas: Kolam Renang, Free Wifi, PS4, Netflix</p>
+				<div class="flex justify-end w-full">
+					<Button href="https://grorental.com/property/wallts-house">{m.homepage_clientlist_button_villaview()}</Button>
+				</div>
 				</Card.Content>
 			</Card.Root>
 			<Card.Root class="max-w-xl">
 				<img
-					alt="Luxury Villa"
-					class="w-full overflow-hidden rounded-t-lg object-contain object-center"
+					alt="Cozy Studio-Sized Room at Galeri Ciumbuleuit Apt 2"
+					class="w-full aspect-video overflow-hidden object-cover rounded-t-lg object-center"
 					height="200"
-					src="https://img.freepik.com/free-psd/panorama-luxury-living-room-generative-ai_587448-1919.jpg?w=1060&t=st=1706332194~exp=1706332794~hmac=c7532e6237ef7e1e370b307f4b2df9a5d51c8c76a665dc31515850e45e0c37f7"
+					src="https://a0.muscache.com/im/pictures/b83d5452-ce96-43b0-8ce6-8e84a4a0dbb8.jpg?im_w=960"
 					width="300"
 				/>
 				<Card.Content class="my-6">
-					<h3 class="text-lg font-semibold">Luxury Villa</h3>
-					<p class="text-sm text-gray-500">123 Main St, Anytown</p>
+					<h3 class="text-lg font-semibold">Cozy Studio-Sized Room at Galeri Ciumbuleuit Apt 2</h3>
+					<p class="text-sm text-gray-500">Galeri Ciumbuleuit Apartment 2, Jl. Ciumbuleuit No.56, Hegarmanah, Kec. Cidadap, Kota Bandung, Jawa Barat 40141
+					</p>
 					<div class="my-2 flex items-center">
-						<Badge variant="">review rating</Badge>
+						<Badge variant="">Apartment Bintang 3</Badge>
 					</div>
-					<p class="my-2 text-sm">4 Star Apartment</p>
-					<p class="my-2 text-sm">Facilities: Pool, Gym, Free Wifi</p>
+					<!-- <p class="my-2 text-sm">4 Star Apartment</p> -->
+					<p class="my-2 text-sm">Fasilitas: Kolam Renang, View Gunung, Wifi, TV</p>
+				<div class="flex justify-end w-full">
+					<Button href="https://grorental.com/property/wallts-house">{m.homepage_clientlist_button_villaview()}</Button>
+				</div>
 				</Card.Content>
 			</Card.Root>
 			<Card.Root class="max-w-xl">
 				<img
-					alt="Luxury Villa"
-					class="w-full overflow-hidden rounded-t-lg object-contain object-center"
+					alt="Villa Kubah Istana Bunga Lembang"
+					class="w-full aspect-video overflow-hidden object-cover rounded-t-lg object-center"
 					height="200"
-					src="https://img.freepik.com/free-psd/panorama-luxury-living-room-generative-ai_587448-1919.jpg?w=1060&t=st=1706332194~exp=1706332794~hmac=c7532e6237ef7e1e370b307f4b2df9a5d51c8c76a665dc31515850e45e0c37f7"
+					src="https://a0.muscache.com/im/pictures/miso/Hosting-1075295426470097626/original/864d8104-8417-435c-b5ea-6eb9013f8bf6.jpeg?im_w=960"
 					width="300"
 				/>
 				<Card.Content class="my-6">
-					<h3 class="text-lg font-semibold">Luxury Villa</h3>
-					<p class="text-sm text-gray-500">123 Main St, Anytown</p>
+					<h3 class="text-lg font-semibold">Villa Kubah Istana Bunga Lembang</h3>
+					<p class="text-sm text-gray-500">Jalan Buntu, Cihanjuang Rahayu, Parongpong, West Bandung Regency, West Java 40559</p>
 					<div class="my-2 flex items-center">
-						<Badge variant="">review rating</Badge>
+						<Badge variant="">Villa Bintang 4</Badge>
 					</div>
-					<p class="my-2 text-sm">4 Star Apartment</p>
-					<p class="my-2 text-sm">Facilities: Pool, Gym, Free Wifi</p>
+					<!-- <p class="my-2 text-sm">4 Star Apartment</p> -->
+					<p class="my-2 text-sm">Fasilitas: Kolam Renang, View Gunung, Wifi, TV</p>
+				<div class="flex justify-end w-full">
+					<Button href="https://grorental.com/property/wallts-house">{m.homepage_clientlist_button_villaview()}</Button>
+				</div>
 				</Card.Content>
 			</Card.Root>
 		</div>

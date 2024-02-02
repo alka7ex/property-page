@@ -1,24 +1,10 @@
 <script>
 	import { page } from '$app/stores';
-	import { goto } from '$app/navigation';
 	import { Button } from '$lib/components/ui/button';
 	import logo from '$lib/images/grorental-_logo-white.webp';
 	import { Sun, Moon } from 'lucide-svelte';
+	import * as m from '$paraglide/messages';
 
-	let nav = {
-		title: 'Svelte Tailwinds',
-		img: logo,
-		listnavs: [
-			{
-				name: 'Property',
-				link: '/property'
-			},
-			{
-				name: 'Contact us',
-				link: '/contact-us'
-			}
-		]
-	};
 	$: isActive = $page.route.id?.split('/')[1];
 	let isMobileMenu = false;
 
@@ -77,12 +63,12 @@
 				</button>
 			</div>
 			<div class="flex items-center justify-center">
-				<a href="/" class="flex"> <img class="h-8 w-auto" src={nav.img} alt="Your Company" /> </a>
+				<a href="/" class="flex"> <img class="h-8 w-auto" src={logo} alt="Your Company" /> </a>
 			</div>
-			<div class="flex flex-grow md:ml-6 md:flex md:space-x-8 justify-end hidden">
-				{#each nav.listnavs as item}
-					<Button href={item.link} class="my-auto text-white" variant="link">{item.name}</Button>
-				{/each}
+			<div class="flex hidden flex-grow justify-end md:ml-6 md:flex md:space-x-8">
+				<Button href="/property" class="my-auto text-white" variant="link"
+					>{m.homepage_navbar_property()}</Button
+				>
 			</div>
 		</div>
 	</div>
@@ -90,15 +76,13 @@
 	<!-- Mobile menu, show/hide based on menu state. -->
 	<div class="md:hidden {isMobileMenu ? 'block' : 'hidden'}" id="mobile-menu">
 		<div class="space-y-1 pb-3 pt-2">
-			{#each nav.listnavs as item}
-				<a
-					href={item.link}
-					class="{isActive === item.link.split('/')[1]
-						? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-						: 'border-transparent text-white hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'} block border-l-4 py-2 pl-3 pr-4 text-base font-medium sm:pl-5 sm:pr-6"
-					>{item.name}</a
-				>
-			{/each}
+			<a
+				href="/property"
+				class="{isActive
+					? 'border-indigo-500 bg-indigo-50 text-indigo-700'
+					: 'border-transparent text-white hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'} block border-l-4 py-2 pl-3 pr-4 text-base font-medium sm:pl-5 sm:pr-6"
+				>{m.homepage_navbar_property()}</a
+			>
 		</div>
 	</div>
 </nav>

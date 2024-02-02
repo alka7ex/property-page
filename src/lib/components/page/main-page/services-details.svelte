@@ -31,13 +31,13 @@
 						</p>
 					</Card.Description>
 					<Card.Description>
-						<p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle3()}</p>
+						<p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle2()}</p>
 						<p>
 							{m.homepage_services_descriptions2()}
 						</p>
 					</Card.Description>
 					<Card.Description>
-						<p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle4()}</p>
+						<p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle3()}</p>
 						<p>
 							{m.homepage_services_descriptions3()}
 						</p>
@@ -48,16 +48,16 @@
 
 		<!-- Demand Acceleration Card -->
 
-            <Card.Root class="border-lg shadow-lg">
-                <Card.Header class="mb-4 justify-end text-2xl font-bold md:text-3xl"
+		<Card.Root class="border-lg shadow-lg">
+			<Card.Header class="mb-4 justify-end text-2xl font-bold md:text-3xl"
 				>{m.homepage_services_title2()}</Card.Header
-                >
-                <Card.Content class="flex flex-col md:flex-row">
-                    <div class="md:flex md:w-1/2 md:flex-col md:space-y-4 md:pr-8">
-                        <Card.Description>
-                            <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle2()}</p>
-                            <p>
-                                {m.homepage_services_descriptions4()}
+			>
+			<Card.Content class="flex flex-col md:flex-row">
+				<div class="md:flex md:w-1/2 md:flex-col md:space-y-4 md:pr-8">
+					<Card.Description>
+						<p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle2()}</p>
+						<p>
+							{m.homepage_services_descriptions4()}
 						</p></Card.Description
 					>
 					<Card.Description>
@@ -67,9 +67,9 @@
 						</p>
 					</Card.Description>
 					<Card.Description>
-                        <p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle6()}</p>
+						<p class="mb-6 text-lg font-bold">{m.homepage_services_subtitle6()}</p>
 						<p>
-                            {m.homepage_services_descriptions6()}
+							{m.homepage_services_descriptions6()}
 						</p>
 					</Card.Description>
 				</div>
