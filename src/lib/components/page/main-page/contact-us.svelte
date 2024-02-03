@@ -15,7 +15,7 @@ $: console.log(name, email, message);
 </script>
 
 <section class="w-full bg-[hsl(226,100%,90%)] py-10 text-black my-10" id="contact-us">
-	<Card.Root class="mx-5 lg:mx-10">
+	<Card.Root class="mx-5 lg:mx-16">
 		<Card.Content class="container">
 			<div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
 				<div class="space-y-4">

@@ -7,7 +7,7 @@
 </script>
 
 <section class="bg-slate-700 py-20 text-white">
-	<div class="grid-row mx-20 grid">
+	<div class="grid-row mx-10 lg:mx-20 grid">
 		<div class="mx-auto mb-20 flex flex-col items-center justify-center text-center">
 			<h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{m.homepage_client_title()}</h2>
 			<p
@@ -16,8 +16,8 @@
 				{m.homepage_client_descriptions()}
 			</p>
 		</div>
-		<div class="mx-auto flex flex-col lg:flex-row justify-center gap-8">
-			<Card.Root class="max-w-xl">
+		<div class="mx-auto flex flex-col lg:flex-row justify-center gap-8 border-none">
+			<Card.Root class="">
 				<img
 					alt="Wallts House"
 					class="w-full aspect-video overflow-hidden object-cover rounded-t-lg object-center"
@@ -38,7 +38,7 @@
 				</div>
 				</Card.Content>
 			</Card.Root>
-			<Card.Root class="max-w-xl">
+			<Card.Root class="">
 				<img
 					alt="Cozy Studio-Sized Room at Galeri Ciumbuleuit Apt 2"
 					class="w-full aspect-video overflow-hidden object-cover rounded-t-lg object-center"
@@ -60,7 +60,7 @@
 				</div>
 				</Card.Content>
 			</Card.Root>
-			<Card.Root class="max-w-xl">
+			<Card.Root class="">
 				<img
 					alt="Villa Kubah Istana Bunga Lembang"
 					class="w-full aspect-video overflow-hidden object-cover rounded-t-lg object-center"

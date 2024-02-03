@@ -9,7 +9,7 @@
 </script>
 
 <section class="py-10">
-	<div class="mx-4 md:mx-10">
+	<div class="mx-4 md:mx-16">
 		<!-- OTA Acceleration Card -->
 		<Card.Root class="border-lg mb-10 shadow-lg">
 			<Card.Header class="mb-4 text-2xl font-bold md:text-3xl"

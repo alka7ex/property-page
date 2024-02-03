@@ -29,91 +29,91 @@
 			<div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={airbnb}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={agoda}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={booking}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={tiket}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={traveloka}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={trip}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={google}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={instagram}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={facebook}
-					width="200"
+					
 				/>
 			</div>
             <div class="mx-auto flex w-full items-center justify-center">
 				<img
 					alt="Logo"
-					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center"
-					height="200"
+					class="overflow-hidden rounded-lg bg-green-200 object-contain object-center h-32 w-32 lg:h-40 lg:w-40"
+					
 					src={expedia}
-					width="200"
+					
 				/>
 			</div>
 		</div>
