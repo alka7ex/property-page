@@ -25,7 +25,7 @@
 			</p>
 			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_cancellation_policy()}</h3>
 			<p class="my-2">
-				{propertyDetails.cancllation_policy}
+				{propertyDetails.cancellation_policy}
 			</p>
 			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_address()}</h3>
 			<p class="my-2">

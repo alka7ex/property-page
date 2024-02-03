@@ -14,7 +14,7 @@
 	<div class="w-1/2">
 		<img
 			alt="Luxury Villa"
-			class="h-full w-full rounded-l-xl object-cover"
+			class="h-80 w-full rounded-l-xl object-cover"
 			height="200"
 			src= {propertyList.content.photos[0].url}
 			style={{
