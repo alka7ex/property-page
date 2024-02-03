@@ -10,8 +10,10 @@
 	</Card.Header>
 	<Card.Content class="border-none">
 		<Card.Description class="border-none text-black">
-			<p class="my-2">
-			  {propertyDetails.content.description}
+			<p class="mt-2 text-sm">
+				{@html propertyDetails.content.description.split('\n').map((line, index) => (
+					`<span key=${index}>${line}<br /></span>`
+				)).join('')}
 			</p>
 		  
 			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_facilities()}</h3>
