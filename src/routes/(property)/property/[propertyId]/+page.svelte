@@ -9,6 +9,7 @@
 	import PropertyInquiry from '$lib/components/page/property-page/property-inquiry/property-inquiry.svelte';
 	import * as Card from '$lib/components/ui/card/index.js';
 	import * as m from '$paraglide/messages';
+	import PropertyFacilities from '$lib/components/page/property-page/property-descriptions/property-facilities.svelte';
 
 	export let data: PageData;
 	console.log(data);
@@ -32,7 +33,10 @@
 			<div class="container grid grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:px-10">
 				<PropertyDescriptions propertyDetails={data.data} />
 				<!-- <PropertyRoomType /> -->
-				<PropertyInquiry propertyInquiry={data.data} />
+				<div class="flex flex-col gap-y-4">
+					<PropertyInquiry propertyInquiry={data.data} />
+					<PropertyFacilities propertyDetails={data.data} />
+				</div>
 			</div>
 			<div class="container px-2 md:grid-cols-2 lg:px-10">
 				<Card.Root class="border-none bg-[#FEF2F4] shadow-lg">

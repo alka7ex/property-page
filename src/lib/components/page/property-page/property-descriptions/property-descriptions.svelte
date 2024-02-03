@@ -18,13 +18,7 @@
 		  
 			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_facilities()}</h3>
 		  
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0">
-			  {#each propertyDetails.content.facilities as facilitiesList}
-				<ul class="my-1 list-inside list-disc">
-				  <li>{facilitiesList.facilities_name}</li>
-				</ul>
-			  {/each}
-			</div>
+			
 		  
 			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_property_policy()}</h3>
 			<p class="my-2">
