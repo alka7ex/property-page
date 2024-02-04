@@ -1,10 +1,10 @@
 import type { PageServerLoad } from './$types.ts';
 import * as schema from '$lib/db/schema.js';
-import { drizzle } from 'drizzle-orm/neon-http';
-import { neon } from '@neondatabase/serverless';
+import { drizzle } from 'drizzle-orm/postgres-js';
+import postgres from 'postgres';
 import { PUBLIC_DRIZZLE_DATABASE_URL } from '$env/static/public';
 
-const sql = neon(PUBLIC_DRIZZLE_DATABASE_URL!);
+const sql = postgres(PUBLIC_DRIZZLE_DATABASE_URL!);
 const db = drizzle(sql, { schema: schema });
 
 export const load = (async ({params}) => {
