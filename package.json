@@ -68,7 +68,7 @@
   "dependencies": {
     "@inlang/paraglide-js-adapter-sveltekit": "^0.2.5",
     "@internationalized/date": "^3.5.1",
-    "@neondatabase/serverless": "^0.7.2",
+    "@sveltejs/adapter-cloudflare": "^4.1.0",
     "bits-ui": "^0.14.0",
     "clsx": "^2.1.0",
     "drizzle-orm": "^0.29.3",
