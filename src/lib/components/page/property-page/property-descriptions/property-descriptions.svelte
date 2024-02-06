@@ -15,11 +15,6 @@
 					`<span key=${index}>${line}<br /></span>`
 				)).join('')}
 			</p>
-		  
-			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_facilities()}</h3>
-		  
-			
-		  
 			<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_property_policy()}</h3>
 			<p class="my-2">
 			  {propertyDetails.property_policy}
