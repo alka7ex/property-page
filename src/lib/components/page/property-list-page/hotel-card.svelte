@@ -6,23 +6,24 @@
 	import type { PageData } from '../../../../routes/property/$types.js';
 	import * as m from "$paraglide/messages"
 
-	export let propertyList:any ;
+	export let propertyList:any;
 	// console.log(propertyList)
 </script>
 
 <Card.Root class="flex w-full max-w-4xl rounded-xl shadow-lg bg-[#F1F4FA]">
 	<div class="w-1/2">
 		<img
-			alt="Luxury Villa"
-			class="h-80 w-full rounded-l-xl object-cover"
-			height="200"
-			src= {propertyList.content.photos[0].url}
-			style={{
-				aspectRatio: '200/300',
-				objectFit: 'cover'
-			}}
-			width="300"
-		/>
+		alt="Luxury Villa"
+		class="h-80 w-full rounded-l-xl object-cover"
+		height="200"
+		src={propertyList.content.photos && propertyList.content.photos.length > 0 ? propertyList.content.photos[0].url : ''}
+		style={{
+			aspectRatio: '200/300',
+			objectFit: 'cover'
+		}}
+		width="300"
+	/>
+	
 	</div>
 	<Card.Content class="w-1/2 p-6">
 		<h2 class="text-2xl font-bold">

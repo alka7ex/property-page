@@ -1,6 +1,6 @@
 {
-  "id": "22fe4cf6-a27f-4fd1-ab22-2ddb94f5053c",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "d83aa26a-215f-4652-8a61-c3f99ffc22e6",
+  "prevId": "1d61db97-36a1-4e6c-be43-e6766daba9df",
   "version": "5",
   "dialect": "pg",
   "tables": {
@@ -26,12 +26,6 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp(6) with time zone",
-          "primaryKey": false,
-          "notNull": false
         }
       },
       "indexes": {},
@@ -42,6 +36,49 @@
           "tableTo": "property",
           "columnsFrom": [
             "property_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
+    "facilities": {
+      "name": "facilities",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "content_id": {
+          "name": "content_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "facilities_name": {
+          "name": "facilities_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "facilities_content_id_content_id_fk": {
+          "name": "facilities_content_id_content_id_fk",
+          "tableFrom": "facilities",
+          "tableTo": "content",
+          "columnsFrom": [
+            "content_id"
           ],
           "columnsTo": [
             "id"
@@ -75,12 +112,6 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp(6) with time zone",
-          "primaryKey": false,
-          "notNull": false
         }
       },
       "indexes": {},
@@ -102,6 +133,41 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
+    "profiles": {
+      "name": "profiles",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "phone": {
+          "name": "phone",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    },
     "property": {
       "name": "property",
       "schema": "",
@@ -115,6 +181,12 @@
         },
         "property_name": {
           "name": "property_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "slug": {
+          "name": "slug",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -173,18 +245,6 @@
           "primaryKey": false,
           "notNull": false
         },
-        "min_stay_type": {
-          "name": "min_stay_type",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "acc_channels_count": {
-          "name": "acc_channels_count",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
         "latitude": {
           "name": "latitude",
           "type": "text",
@@ -197,8 +257,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "location_precision": {
-          "name": "location_precision",
+        "google_maps_url": {
+          "name": "google_maps_url",
           "type": "text",
           "primaryKey": false,
           "notNull": false
@@ -221,57 +281,21 @@
           "primaryKey": false,
           "notNull": false
         },
-        "website": {
-          "name": "website",
+        "cancellation_policy": {
+          "name": "cancellation_policy",
           "type": "text",
           "primaryKey": false,
           "notNull": false
         },
-        "logo_url": {
-          "name": "logo_url",
+        "property_policy": {
+          "name": "property_policy",
           "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "default_cancellation_policy_id": {
-          "name": "default_cancellation_policy_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "hotel_policy_id": {
-          "name": "hotel_policy_id",
-          "type": "uuid",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "default_tax_set_id": {
-          "name": "default_tax_set_id",
-          "type": "uuid",
           "primaryKey": false,
           "notNull": false
         },
         "profile_id": {
           "name": "profile_id",
           "type": "uuid",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "created_at": {
-          "name": "created_at",
-          "type": "timestamp(6) with time zone",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "slug": {
-          "name": "slug",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
-        },
-        "google_maps_url": {
-          "name": "google_maps_url",
-          "type": "text",
           "primaryKey": false,
           "notNull": false
         }
@@ -312,7 +336,21 @@
         }
       },
       "indexes": {},
-      "foreignKeys": {},
+      "foreignKeys": {
+        "rate_plans_room_type_id_room_type_id_fk": {
+          "name": "rate_plans_room_type_id_room_type_id_fk",
+          "tableFrom": "rate_plans",
+          "tableTo": "room_type",
+          "columnsFrom": [
+            "room_type_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
@@ -338,16 +376,24 @@
           "type": "text",
           "primaryKey": false,
           "notNull": false
-        },
-        "price": {
-          "name": "price",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
         }
       },
       "indexes": {},
-      "foreignKeys": {},
+      "foreignKeys": {
+        "room_type_property_id_property_id_fk": {
+          "name": "room_type_property_id_property_id_fk",
+          "tableFrom": "room_type",
+          "tableTo": "property",
+          "columnsFrom": [
+            "property_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     }

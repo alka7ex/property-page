@@ -18,22 +18,16 @@ export const property = pgTable('property', {
 	email: text('email'),
 	phone: text('phone'),
 	is_active: boolean('is_active'),
-	min_stay_type: text('min_stay_type'),
-	acc_channels_count: text('acc_channels_count'),
 	latitude: text('latitude'),
 	longitude: text('longitude'),
-	location_precision: text('location_precision'),
 	google_maps_url: text('google_maps_url'),
 	property_type: text('property_type'),
 	property_category: text('property_category'),
 	timezone: tzEnum('timezone'),
-	website: text('website'),
-	logo_url: text('logo_url'),
 	cancellation_policy: text('cancellation_policy'),
 	property_policy: text('property_policy'),
-	default_tax_set_id: uuid('default_tax_set_id'),
 	profile_id: uuid('profile_id'),
-	// created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+	created_at: timestamp('created_at', { precision: 6, withTimezone: true })
 });
 
 export const content = pgTable('content', {
@@ -68,6 +62,13 @@ export const facilities = pgTable('facilities', {
 	content_id: uuid('content_id').references(() => content.id).notNull(),
 	facilities_name: text('facilities_name'),
 })
+
+export const profiles = pgTable("profiles", {
+	id: uuid("id").primaryKey().notNull(),
+	email: text("email"),
+	phone: text("phone"),
+	createdAt: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+});
 
 // relations
 
