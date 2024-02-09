@@ -27,15 +27,15 @@
 			</h1>
 		</div>
 		<div class="flex flex-1 flex-col gap-4 p-4 md:gap-8 md:p-6">
-			<PhotoGalleryCarousel propertyPhoto={data.data} />
+			<PhotoGalleryCarousel propertyPhoto={data?.data} />
 			<!-- <PhotoGallery/> -->
 
 			<div class="container grid grid-cols-1 gap-4 px-2 md:grid-cols-2 lg:px-10">
-				<PropertyDescriptions propertyDetails={data.data} />
+				<PropertyDescriptions propertyDetails={data?.data} />
 				<!-- <PropertyRoomType /> -->
 				<div class="flex flex-col gap-y-4">
-					<PropertyInquiry propertyInquiry={data.data} />
-					<PropertyFacilities propertyDetails={data.data} />
+					<PropertyInquiry propertyInquiry={data?.data} />
+					<PropertyFacilities propertyDetails={data?.data} />
 				</div>
 			</div>
 			<div class="container px-2 md:grid-cols-2 lg:px-10">
