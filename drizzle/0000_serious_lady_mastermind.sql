@@ -16,10 +16,31 @@ CREATE TABLE IF NOT EXISTS "facilities" (
 	"facilities_name" text
 );
 --> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "group_users" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"group_id" uuid NOT NULL,
+	"user_id" uuid NOT NULL,
+	"role" text DEFAULT '' NOT NULL,
+	"created_at" timestamp with time zone DEFAULT now()
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "groups" (
+	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
+	"name" text DEFAULT '' NOT NULL,
+	"created_at" timestamp with time zone DEFAULT now() NOT NULL
+);
+--> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "photos" (
 	"id" uuid PRIMARY KEY DEFAULT gen_random_uuid() NOT NULL,
 	"content_id" uuid NOT NULL,
 	"url" text
+);
+--> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "profiles" (
+	"id" uuid PRIMARY KEY NOT NULL,
+	"email" text,
+	"phone" text,
+	"created_at" timestamp with time zone DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "property" (
@@ -35,21 +56,16 @@ CREATE TABLE IF NOT EXISTS "property" (
 	"email" text,
 	"phone" text,
 	"is_active" boolean,
-	"min_stay_type" text,
-	"acc_channels_count" text,
 	"latitude" text,
 	"longitude" text,
-	"location_precision" text,
 	"google_maps_url" text,
 	"property_type" text,
 	"property_category" text,
 	"timezone" "timezone",
-	"website" text,
-	"logo_url" text,
 	"cancellation_policy" text,
 	"property_policy" text,
-	"default_tax_set_id" uuid,
-	"profile_id" uuid
+	"profile_id" uuid,
+	"created_at" timestamp (6) with time zone
 );
 --> statement-breakpoint
 CREATE TABLE IF NOT EXISTS "rate_plans" (
@@ -65,6 +81,15 @@ CREATE TABLE IF NOT EXISTS "room_type" (
 	"room_type_name" text
 );
 --> statement-breakpoint
+CREATE TABLE IF NOT EXISTS "user_roles" (
+	"id" uuid,
+	"group_name" text,
+	"role" text,
+	"email" varchar(255),
+	"group_id" uuid,
+	"user_id" uuid
+);
+--> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "content" ADD CONSTRAINT "content_property_id_property_id_fk" FOREIGN KEY ("property_id") REFERENCES "property"("id") ON DELETE no action ON UPDATE no action;
 EXCEPTION
@@ -73,6 +98,12 @@ END $$;
 --> statement-breakpoint
 DO $$ BEGIN
  ALTER TABLE "facilities" ADD CONSTRAINT "facilities_content_id_content_id_fk" FOREIGN KEY ("content_id") REFERENCES "content"("id") ON DELETE no action ON UPDATE no action;
+EXCEPTION
+ WHEN duplicate_object THEN null;
+END $$;
+--> statement-breakpoint
+DO $$ BEGIN
+ ALTER TABLE "group_users" ADD CONSTRAINT "group_users_group_id_groups_id_fk" FOREIGN KEY ("group_id") REFERENCES "groups"("id") ON DELETE no action ON UPDATE no action;
 EXCEPTION
  WHEN duplicate_object THEN null;
 END $$;

@@ -1,1 +1,0 @@
-ALTER TABLE "property" ADD COLUMN "created_at" timestamp (6) with time zone;

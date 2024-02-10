@@ -27,27 +27,29 @@ export const property = pgTable('property', {
 	cancellation_policy: text('cancellation_policy'),
 	property_policy: text('property_policy'),
 	profile_id: uuid('profile_id'),
-	created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
 });
 
 export const content = pgTable('content', {
 	id: uuid('id').primaryKey().defaultRandom(),
 	property_id: uuid('property_id').references(() => property.id).notNull(),
 	description: text('description'),
-	// created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
 });
 
 export const photos = pgTable('photos', {
 	id: uuid('id').primaryKey().defaultRandom(),
 	content_id: uuid('content_id').references(() => content.id).notNull(),
 	url: text('url'),
-	// created_at: timestamp('created_at', { precision: 6, withTimezone: true })
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
 })
 
 export const room_type = pgTable('room_type', {
 	id: uuid('id').primaryKey().defaultRandom(),
 	property_id: uuid('property_id').references(() => property.id).notNull(),
 	room_type_name: text('room_type_name'),
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+
 })
 
 export const rate_plans = pgTable('rate_plans', {
@@ -55,18 +57,46 @@ export const rate_plans = pgTable('rate_plans', {
 	room_type_id: uuid('room_type_id').references(() => room_type.id).notNull(),
 	rate_plan_name: text('rate_plan_name'),
 	price: integer('price'),
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+
 })
 
 export const facilities = pgTable('facilities', {
 	id: uuid('id').primaryKey().defaultRandom(),
 	content_id: uuid('content_id').references(() => content.id).notNull(),
 	facilities_name: text('facilities_name'),
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+
 })
 
 export const profiles = pgTable("profiles", {
 	id: uuid("id").primaryKey().notNull(),
 	email: text("email"),
 	phone: text("phone"),
+	createdAt: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+});
+
+
+export const userRoles = pgTable("user_roles", {
+	id: uuid("id"),
+	groupName: text("group_name"),
+	role: text("role"),
+	email: varchar("email", { length: 255 }),
+	groupId: uuid("group_id"),
+	userId: uuid("user_id"),
+});
+
+export const groupUsers = pgTable("group_users", {
+	id: uuid("id").defaultRandom().primaryKey().notNull(),
+	groupId: uuid("group_id").notNull().references(() => groups.id),
+	userId: uuid("user_id").notNull(),
+	role: text("role").default('').notNull(),
+	create_at: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+});
+
+export const groups = pgTable("groups", {
+	id: uuid("id").defaultRandom().primaryKey().notNull(),
+	name: text("name").default('').notNull(),
 	createdAt: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
 });
 
@@ -91,12 +121,17 @@ export const photoRelations2 = relations(photos, ({ one }) => ({
 }))
 
 
-export const propertyRoomTypeRelation = relations(property, ({ one }) => ({
-	room_type: one(room_type, {
-		fields: [property.id],
-		references: [room_type.property_id]
+export const propertyRoomTypeRelation = relations(property, ({ many }) => ({
+	room_type: many(room_type)
+}))
+
+export const propertyRoomTypeRelation2 = relations(room_type, ({ one }) => ({
+	room_type: one(property, {
+		fields: [room_type.id],
+		references: [property.id]
 	})
 }))
+
 
 export const ratePlanRoomTypeRelation = relations(room_type, ({ many }) => ({
 	rate_plans: many(rate_plans),
