@@ -126,8 +126,8 @@ export const propertyRoomTypeRelation = relations(property, ({ many }) => ({
 }))
 
 export const propertyRoomTypeRelation2 = relations(room_type, ({ one }) => ({
-	room_type: one(property, {
-		fields: [room_type.id],
+	property: one(property, {
+		fields: [room_type.property_id],
 		references: [property.id]
 	})
 }))
