@@ -66,7 +66,7 @@
 				<a href="/" class="flex"> <img class="h-8 w-auto" src={logo} alt="Your Company" /> </a>
 			</div>
 			<div class="flex hidden flex-grow justify-end md:ml-6 md:flex md:space-x-8">
-				<Button href="/property" class="my-auto text-white" variant=""
+				<Button href="/property" class="my-auto bg-white text-black rounded-full" variant=""
 					>{m.homepage_navbar_property()}</Button
 				>
 			</div>

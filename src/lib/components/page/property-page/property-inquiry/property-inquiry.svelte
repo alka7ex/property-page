@@ -30,7 +30,7 @@
 	// 	let startValue: DateValue | undefined = undefined;
 </script>
 
-<Card.Root class="h-max border-none bg-[#F1F4FA] shadow-none">
+<Card.Root class="h-max border-none bg-[#FEF2F4] shadow-none">
 	<Card.Header class="text-2xl font-bold ">{m.propertydetails_inqury_h2()}</Card.Header>
 	<!-- <Card.Content class="rounded-lg border p-4 shadow-lg">
 			<Card.Header class="mb-2 text-lg font-bold">Select Dates</Card.Header>
@@ -75,28 +75,29 @@
 		</Card.Content> -->
 	<div class="flex w-full flex-col justify-between rounded shadow-lg">
 		<Card.Content class="text-2xl font-bold">
-			{propertyInquiry.room_type.room_type_name}
+			{propertyInquiry.room_type.room_type_name || ''}
 		</Card.Content>
 
-		{#each propertyInquiry.room_type.rate_plans as propertyList}
+		{#each propertyInquiry.room_type?.rate_plans ?? [] as propertyList}
 			<Card.Content class="flex justify-between">
-				<Card.Description class="text-sm text-black">{propertyList.rate_plan_name}</Card.Description
+				<Card.Description class="text-sm text-black"
+					>{propertyList.rate_plan_name || ''}</Card.Description
 				>
 				<Card.Title class="text-sm"
-					>{propertyInquiry.currency}
+					>{propertyInquiry.currency || ''}
 					{Number(propertyList.price).toLocaleString('id-ID')}
 					{m.propertydetails_inquiry_pernight()}</Card.Title
 				>
 			</Card.Content>
+		{:else}
+			<Card.Footer>No room at the moment</Card.Footer>
 		{/each}
 		<Button
 			class="mb-8 mr-8 self-end"
 			href="https://wa.me/6281395951495?text=Hi%20Kak!,%20Saya%20tertarik%20untuk%20booking%20di%20{propertyInquiry.property_name}!"
 			>{m.propertydetails_inquiry_button_booknow()}</Button
 		>
-	</div>
-
-	<!-- <div class="flex w-full flex-col justify-between rounded shadow-lg">
+		<!-- <div class="flex w-full flex-col justify-between rounded shadow-lg">
 			<Card.Header>
 				<Card.Title class="text-2xl font-bold">{m.propertydetails_inquiry_google_maps()}</Card.Title>
 			</Card.Header>
@@ -107,4 +108,5 @@
 				></iframe>
 			</Card.Content>
 		</div> -->
-</Card.Root>
+	</div></Card.Root
+>

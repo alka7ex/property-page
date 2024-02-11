@@ -10,14 +10,16 @@
 	</Card.Header>
 	<Card.Content class="border-none">
 		<Card.Description class="border-none text-black">
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-0">
-			  {#each propertyDetails.content.facilities as facilitiesList}
-				<ul class="my-1 list-inside list-disc">
-				  <li>{facilitiesList.facilities_name}</li>
-				</ul>
-			  {/each}
+			<div class="grid grid-cols-1 gap-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+				{#each propertyDetails.content?.facilities??[] as facilitiesList}
+					<ul class="my-1 list-inside list-disc">
+						<li>{facilitiesList?.facilities_name}</li>
+					</ul>
+				{:else}
+					<li>No facilities</li>
+				{/each}
 			</div>
-		  </Card.Description>
+		</Card.Description>
 	</Card.Content>
 </Card.Root>
 

@@ -39,7 +39,7 @@
 				</div>
 			</div>
 			<div class="container px-2 md:grid-cols-2 lg:px-10">
-				<Card.Root class="border-none bg-[#FEF2F4] shadow-lg">
+				<Card.Root class="border-none bg-[#F1F4FA] shadow-lg">
 					<Card.Header>
 						<Card.Title class="text-2xl font-bold"
 						>{m.propertydetails_inquiry_google_maps()}</Card.Title

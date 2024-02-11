@@ -27,22 +27,20 @@
 	</div>
 	<Card.Content class="w-1/2 p-6">
 		<h2 class="text-2xl font-bold">
-			{propertyList.property_name ?? ''}
+			{propertyList.property_name ?? 'No property name'}
 		</h2>
 		<p class="mt-2 text-sm text-gray-500">
-			<a href={propertyList.google_maps_url ?? ''}>
-				{propertyList.address ?? ''}
+			<a href={propertyList.google_maps_url ?? 'No property google url'}>
+				{propertyList.address ?? 'No property address'}
 			</a>
 		</p>
 
 		<div class="my-2">
-			<p class="my-1 font-bold">{propertyList.property_type ?? ''}</p>
+			<p class="my-1 font-bold">{propertyList.property_type ?? 'No property type'}</p>
 		</div>
 
-		<p class="mt-2 text-sm line-clamp-3">
-			{@html propertyList.content?.description?.split('\n').map((line, index) => (
-				`<span key=${index}>${line}<br /></span>`
-			)).join('')}
+		<p class="mt-2 text-sm line-clamp-3 whitespace-pre-line">
+			{propertyList.description ?? 'No property description'}
 		</p>
 
 		<p class="mt-4"></p>
@@ -50,7 +48,7 @@
 			<div class="flex items-baseline gap-1 my-auto">
 				<span class="text-2xl font-bold">{propertyList.currency ?? ''}</span>
 				<span class="text-2xl font-bold">
-					{Number(propertyList.room_type?.rate_plans[0]?.price).toLocaleString('id-ID') ?? ''}
+					{Number(propertyList.room_type[0]?.rate_plans[0]?.price).toLocaleString('id-ID') ?? ''}
 				</span>
 				<span class="my-auto text-base text-gray-500">{m.propertylist_hotelcard_pernight()}</span>
 			</div>

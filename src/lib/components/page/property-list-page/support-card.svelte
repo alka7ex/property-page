@@ -6,7 +6,7 @@
 </script>
 <!-- Your other Svelte imports and code here -->
 
-<div class="flex items-center justify-center mt-0 lg:mt-20">
+<div class="flex items-center justify-center mt-0">
 	<Card.Root class="items-center justify-center w-full max-w-4xl rounded-xl bg-[#FEF2F4] shadow-lg border-none">
 		<Card.Header>
 			<Card.Title>{m.propertylist_support_title()}</Card.Title>
