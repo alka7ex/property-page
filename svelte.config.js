@@ -17,7 +17,8 @@ const config = {
 		alias: {
 			"@/*": "./path/to/lib/*",
 			"$paraglide": "./src/paraglide",
-		  }
+		  },
+		  inlineStyleThreshold: Infinity
 	}
 };
 
