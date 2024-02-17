@@ -6,7 +6,7 @@
 
 	<Card.Root class="border border-none bg-[#F1F4FA] shadow-lg">
 		<Card.Header class="">
-			<h1 class="text-2xl font-bold">{propertyDetails.property_name}</h1>
+			<h2 class="text-2xl font-bold">{propertyDetails.property_name}</h2>
 		</Card.Header>
 		<Card.Content class="border-none">
 			<Card.Description class="border-none text-black">
