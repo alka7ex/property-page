@@ -10,6 +10,11 @@
 	import DescriptionCard from '$lib/components/page/property-list-page/description-card.svelte';
 	export let data: PageData;
 	console.log(data);
+
+	console.log(data);
+	let keywords =
+		'Vacation rentals, Vacation rental in Indonesia, Best vacation rentals in Indonesia, Private vacation rental in Indonesia, home away, Holiday rentals, Budget hotel bandung';
+
 </script>
 
 <svelte:head>
@@ -18,6 +23,7 @@
 	Our stunning
 	accommodations offer breathtaking views, top-notch amenities, and a truly unforgettable experience.
 	Don't miss out, book now!" />
+	<meta name="keywords" content={keywords} />
 </svelte:head>
 
 <div class="h-screenr flex flex-col-reverse gap-6 p-4 md:p-6 lg:flex-row">

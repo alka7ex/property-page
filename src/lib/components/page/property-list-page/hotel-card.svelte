@@ -3,7 +3,6 @@
 	import { Button } from '$lib/components/ui/button';
 	import * as Card from '$lib/components/ui/card';
 	import placeholder from '$lib/images/placeholder.svg.png';
-	import type { PageData } from '../../../../routes/property/$types.js';
 	import * as m from "$paraglide/messages"
 
 	export let propertyList: any;

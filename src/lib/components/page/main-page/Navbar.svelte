@@ -66,7 +66,7 @@
 				<a href="/" class="flex"> <img class="h-8 w-auto" src={logo} alt="Your Company" /> </a>
 			</div>
 			<div class="flex hidden flex-grow justify-end md:ml-6 md:flex md:space-x-8">
-				<Button href="/property" class="my-auto bg-white text-black rounded-full" variant=""
+				<Button href="/property" class="my-auto bg-white text-black rounded-full hover:text-black hover:bg-white" variant="default"
 					>{m.homepage_navbar_property()}</Button
 				>
 			</div>
@@ -80,7 +80,7 @@
 				href="/property"
 				class="{isActive
 					? 'border-indigo-500 bg-indigo-50 text-indigo-700'
-					: 'border-transparent text-white hover:border-gray-300 hover:bg-gray-50 hover:text-gray-700'} block border-l-4 py-2 pl-3 pr-4 text-base font-medium sm:pl-5 sm:pr-6"
+					: 'border-transparent text-white'} block border-l-4 py-2 pl-3 pr-4 text-base font-medium sm:pl-5 sm:pr-6"
 				>{m.homepage_navbar_property()}</a>
 		</div>
 	</div>

@@ -13,7 +13,20 @@
 
 	export let data: PageData;
 	console.log(data);
+	let keywords =
+		'Vacation rentals, Vacation rental in Indonesia, Best vacation rentals in Indonesia, Private vacation rental in Indonesia, home away, Holiday rentals, Budget hotel bandung';
 </script>
+
+<svelte:head>
+	<title
+		>Experience the Remarkable Beauty of Vacation Rental in Indonesia: Your Ultimate Escape</title
+	>
+	<meta
+		name="description"
+		content="Looking for a vacation rental in Indonesia that will leave you speechless? Look no further. Our stunning accommodations offer breathtaking views, top-notch amenities, and a truly unforgettable experience. Don't miss out, book now!"
+	/>
+	<meta name="keywords" content={keywords} />
+</svelte:head>
 
 <div class="flex min-h-screen flex-col">
 	<main class="flex-1">
@@ -42,15 +55,15 @@
 				<Card.Root class="border-none bg-[#F1F4FA] shadow-lg">
 					<Card.Header>
 						<Card.Title class="text-2xl font-bold"
-						>{m.propertydetails_inquiry_google_maps()}</Card.Title
+							>{m.propertydetails_inquiry_google_maps()}</Card.Title
 						>
 					</Card.Header>
 					<Card.Content class="flex flex-col items-center">
 						<iframe
-						class="w-full rounded"
-						src="https://maps.google.com/maps?q={data.data?.latitude},{data.data
-							?.longitude}&hl=es;z=14&amp;output=embed"
-						title="Google Maps"
+							class="w-full rounded"
+							src="https://maps.google.com/maps?q={data.data?.latitude},{data.data
+								?.longitude}&hl=es;z=14&amp;output=embed"
+							title="Google Maps"
 						></iframe>
 					</Card.Content>
 				</Card.Root>

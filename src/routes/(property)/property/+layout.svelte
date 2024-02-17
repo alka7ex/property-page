@@ -6,6 +6,12 @@
 	import Footer from '$lib/components/page/footer.svelte';
 </script>
 
+<svelte:head>
+	<title>Property Lsit</title>
+	<meta name="description" content="We are a tech first, AI enabled revenue growth partner for independent rental property and vacation rental properties"/>
+</svelte:head>
+
+
 <ParaglideJS {i18n}>
 	<main class="">
 		<slot />

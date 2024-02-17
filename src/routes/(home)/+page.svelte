@@ -10,9 +10,6 @@
 
 </script>
 
-<svelte:head>
-	<title>GroRental - Maximize your property revenue potential</title>
-</svelte:head>
 
 <Header/>
 <AboutUs/>
