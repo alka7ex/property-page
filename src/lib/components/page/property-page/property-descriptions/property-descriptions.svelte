@@ -11,7 +11,7 @@
 		<Card.Content class="border-none">
 			<Card.Description class="border-none text-black">
 				<p class="mt-2 text-sm whitespace-pre-line">
-					{propertyDetails.description ?? 'No property description'}
+					{propertyDetails.content?.description ?? 'No property description'}
 				</p>
 				<h3 class="my-2 text-xl font-bold">{m.propertydetails_descriptions_property_policy()}</h3>
 				<p class="my-2">

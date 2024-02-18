@@ -74,24 +74,26 @@
 			</div>
 		</Card.Content> -->
 	<div class="flex w-full flex-col justify-between rounded shadow-lg">
-		<Card.Content class="text-2xl font-bold">
-			{propertyInquiry.room_type.room_type_name || ''}
-		</Card.Content>
-
-		{#each propertyInquiry.room_type?.rate_plans ?? [] as propertyList}
-			<Card.Content class="flex justify-between">
-				<Card.Description class="text-sm text-black"
-					>{propertyList.rate_plan_name || ''}</Card.Description
-				>
-				<Card.Title class="text-sm"
-					>{propertyInquiry.currency || ''}
-					{Number(propertyList.price).toLocaleString('id-ID')}
-					{m.propertydetails_inquiry_pernight()}</Card.Title
-				>
+		{#each propertyInquiry.room_type as propertyInquiry}
+			<Card.Content class="text-lg font-bold">
+				{propertyInquiry.room_type_name || ''}
 			</Card.Content>
-		{:else}
-			<Card.Footer>No room at the moment</Card.Footer>
+			{#each propertyInquiry.rate_plans ?? [] as propertyList}
+				<Card.Content class="flex justify-between">
+					<Card.Description class="text-sm text-black"
+						>{propertyList.rate_plan_name || ''}</Card.Description
+					>
+					<Card.Title class="text-sm"
+						>{propertyInquiry.currency || ''}
+						{Number(propertyList.price).toLocaleString('id-ID')}
+						{m.propertydetails_inquiry_pernight()}</Card.Title
+					>
+				</Card.Content>
+			{:else}
+				<Card.Footer>No room at the moment</Card.Footer>
+			{/each}
 		{/each}
+
 		<Button
 			class="mb-8 mr-8 self-end"
 			href="https://wa.me/6281395951495?text=Hi%20Kak!,%20Saya%20tertarik%20untuk%20booking%20di%20{propertyInquiry.property_name}!"

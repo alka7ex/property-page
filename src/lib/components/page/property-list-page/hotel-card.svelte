@@ -28,7 +28,7 @@
 		<h2 class="text-lg lg:text-2xl font-bold">
 			{propertyList.property_name ?? 'No property name'}
 		</h2>
-		<p class="mt-2 text-sm lg:text-base text-gray-500">
+		<p class="mt-2 text-sm lg:text-base text-gray-500 line-clamp-3 whitespace-pre-line">
 			<a href={propertyList.google_maps_url ?? 'No property google url'}>
 				{propertyList.address ?? 'No property address'}
 			</a>
@@ -39,7 +39,7 @@
 		</div>
 
 		<p class="mt-2 text-sm lg:text-base line-clamp-3 whitespace-pre-line">
-			{propertyList.description ?? 'No property description'}
+			{propertyList?.content?.description ?? 'No property description'}
 		</p>
 
 		<p class="mt-4"></p>
