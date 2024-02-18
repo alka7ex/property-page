@@ -69,6 +69,7 @@
     "@inlang/paraglide-js-adapter-sveltekit": "^0.2.5",
     "@internationalized/date": "^3.5.1",
     "@sveltejs/adapter-cloudflare": "^4.1.0",
+    "@sveltejs/adapter-vercel": "^5.1.0",
     "@sveltejs/amp": "^1.1.0",
     "bits-ui": "^0.14.0",
     "clsx": "^2.1.0",
