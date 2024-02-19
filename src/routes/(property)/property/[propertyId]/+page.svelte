@@ -30,7 +30,7 @@
 
 <div class="flex min-h-screen flex-col">
 	<main class="flex-1">
-		<div class="container flex h-16 items-center justify-between gap-4 bg-[#FEF2F4] shadow-md">
+		<div class="p-4 flex h-16 items-center justify-between gap-4 bg-[#FEF2F4] shadow-md">
 			<!-- <Button data-sveltekit-preload-data="hover" size="icon" variant="outline" href="/property">
 				<ArrowLeftIcon class="h-4 w-4" />
 				<span class="sr-only">Back</span>

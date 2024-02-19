@@ -12,7 +12,7 @@
 </script>
 
 <nav class="bg-[#0038A8] py-4">
-	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+	<div class="mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex">
 			<div class="-ml-2 mr-2 flex items-center md:hidden">
 				<!-- Mobile menu button -->
