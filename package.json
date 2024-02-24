@@ -1,6 +1,6 @@
 {
   "name": "grorental-booking-engine",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite dev",
     "build": "paraglide-js compile --project ./project.inlang && vite build && npm run package",

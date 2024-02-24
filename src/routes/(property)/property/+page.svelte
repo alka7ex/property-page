@@ -30,8 +30,7 @@
 	<div class="flex flex-col gap-4 md:w-1/4">
 		<DescriptionCard />
 		<SupportCard />
-		<!-- <FilterCard /> -->
-	</div>
+zle	</div>
 	<div class="flex flex-col gap-6 md:w-3/4">
 		<h1 class="text-lg lg:text-2xl font-bold mb-6 flex items-center gap-4">
 			Book your vacation rental here
