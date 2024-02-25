@@ -22,4 +22,3 @@
 	<Carousel.Next />
 </Carousel.Root>
 
-{JSON.stringify(propertyPhoto.content.photos)}

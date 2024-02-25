@@ -23,7 +23,7 @@ export const load = (async ({params}) => {
                 }
             },
         },
-        where: (property, { eq }) => eq(property.slug, slug),
+        where: (property, { eq }) => eq(property.slug, 'yvonne-flatley'),
     });
     return { data: result }; // Return a plain object with the result
 }) satisfies PageServerLoad;
